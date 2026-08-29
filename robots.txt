@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dominicsiwiec.com/sitemap.xml
