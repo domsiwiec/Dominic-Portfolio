@@ -2,21 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dominicsiwiec.com/</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dominicsiwiec.com/wrx-2005.html</loc>
+    <loc>https://dominicsiwiec.com/wrx-2005/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dominicsiwiec.com/wrx-2019.html</loc>
+    <loc>https://dominicsiwiec.com/wrx-2019/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dominicsiwiec.com/future-plans.html</loc>
+    <loc>https://dominicsiwiec.com/roblox/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dominicsiwiec.com/future-plans/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
