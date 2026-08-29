@@ -893,6 +893,8 @@ section { position: relative; }
 .footer-inner a { color: var(--text-mid); }
 .footer-inner a:hover { color: var(--accent-dk); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+/* keep the scroll gauge from sitting on top of the footer links */
+.footer-inner { padding-right: 132px; }
 
 /* ---------- Sub-page (project detail) ---------- */
 .page-hero {
@@ -1240,7 +1242,8 @@ section { position: relative; }
 
   .job-when { margin-left: 0; width: 100%; }
   .article { padding: 52px 0; }
-  .footer-inner { justify-content: flex-start; }
+  .footer-inner { justify-content: flex-start; padding-right: 0; }
+  .site-footer { padding-bottom: 118px; }
 
   #speedo { width: 82px; height: 82px; right: 14px; bottom: 14px; }
   #speedo .gauge-readout { bottom: 15px; font-size: .55rem; }
