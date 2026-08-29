@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roblox Development | Dominic Siwiec</title>
+<meta name="description" content="Teaching myself Blender in a day, earning roughly 6 million Robux in UGC sales, and publishing Roblox titles with millions of visits." />
+<link rel="canonical" href="https://dominicsiwiec.com/roblox/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dominicsiwiec.com/roblox/" />
+<meta property="og:title" content="Roblox Development | Dominic Siwiec" />
+<meta property="og:description" content="Teaching myself Blender in a day, earning roughly 6 million Robux in UGC sales, and publishing Roblox titles with millions of visits." />
+<meta property="og:image" content="https://dominicsiwiec.com/images/og-preview.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="alternate icon" type="image/png" href="/favicon.png" />
+<link rel="stylesheet" href="/style.css" />
+<script>(function(){var d=document.documentElement;d.classList.add('js-reveal');try{if(sessionStorage.getItem('ds_seen'))d.classList.add('fast-load');sessionStorage.setItem('ds_seen','1');}catch(e){}})();</script>
+</head>
+<body>
+
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- Wheel loader: dismisses itself via CSS, no JS required -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-road"></div>
+  <div class="loader-streaks"><span></span><span></span><span></span></div>
+  <div class="loader-wheel"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#e8edf6" stroke="#54627a" stroke-width="7"/><circle cx="50" cy="50" r="46" fill="none" stroke="#8a99b0" stroke-width="7" stroke-dasharray="7 9" opacity=".9"/><circle cx="50" cy="50" r="33" fill="#ffffff" stroke="#5b8fd0" stroke-width="3"/><g stroke="#5b8fd0" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50.0,39.0 L50.0,20.0"/><path d="M60.5,46.6 L78.5,40.7"/><path d="M56.5,58.9 L67.6,74.3"/><path d="M43.5,58.9 L32.4,74.3"/><path d="M39.5,46.6 L21.5,40.7"/></g><circle cx="50" cy="50" r="9" fill="#5b8fd0"/><circle cx="50" cy="50" r="4" fill="#ffffff"/></svg></div>
+</div>
+
+<!-- Scroll speedometer: needle redlines as you reach the end of the page -->
+<div id="speedo" aria-hidden="true">
+  <svg viewBox="0 0 100 100">
+    <circle class="gauge-track" cx="50" cy="50" r="34" fill="none" stroke-width="6"
+            stroke-linecap="round" stroke-dasharray="142.42 213.63" transform="rotate(150 50 50)"/>
+    <circle class="gauge-red" cx="50" cy="50" r="34" fill="none" stroke-width="6"
+            stroke-linecap="round" stroke-dasharray="28.48 213.63" transform="rotate(342 50 50)"/>
+    <circle class="gauge-fill" data-arc="142.419" cx="50" cy="50" r="34" fill="none" stroke-width="6"
+            stroke-linecap="round" stroke-dasharray="142.419 213.628" stroke-dashoffset="142.419"
+            transform="rotate(150 50 50)"/>
+    <g class="gauge-tick" stroke-width="1.6" stroke-linecap="round"><path d="M30.95,61.00 L24.45,64.75"/><path d="M26.13,52.51 L20.66,53.08"/><path d="M27.17,42.58 L21.94,40.88"/><path d="M32.16,33.94 L28.08,30.26"/><path d="M40.24,28.07 L38.00,23.05"/><path d="M50.00,28.00 L50.00,20.50"/><path d="M59.76,28.07 L62.00,23.05"/><path d="M67.84,33.94 L71.92,30.26"/><path d="M72.83,42.58 L78.06,40.88"/><path d="M73.87,52.51 L79.34,53.08"/><path d="M69.05,61.00 L75.55,64.75"/></g>
+    <path class="gauge-needle" d="M50,50 L50,22" stroke-width="2.6" stroke-linecap="round"/>
+    <circle class="gauge-hub" cx="50" cy="50" r="3.6"/>
+  </svg>
+  <span class="gauge-readout">0</span>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a href="/" class="brand"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg>Dominic Siwiec</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#swimming">Swimming</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <a href="/#projects" class="back-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+    <div class="section-label">Project &middot; Game development</div>
+    <h1>Roblox development</h1>
+    <p class="lede">
+      What started as a favour to my own audience turned into a development group, a UGC catalogue, and
+      a set of published titles with millions of visits between them.
+    </p>
+
+    <div class="spec-row">
+      <div class="spec"><div class="spec-k">Platform</div><div class="spec-v">Roblox</div></div>
+      <div class="spec"><div class="spec-k">Language</div><div class="spec-v">Lua</div></div>
+      <div class="spec"><div class="spec-k">Modeling</div><div class="spec-v">Blender</div></div>
+      <div class="spec"><div class="spec-k">UGC revenue</div><div class="spec-v">~6M Robux</div></div>
+      <div class="spec"><div class="spec-k">Total visits</div><div class="spec-v">Millions</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="article">
+  <div class="wrap article-grid">
+    <nav class="toc">
+      <h5>On this page</h5>
+      <ul>
+        <li><a href="#start">How it started</a></li>
+        <li><a href="#economy">The Robux economy</a></li>
+        <li><a href="#games">The games</a></li>
+        <li><a href="#team">Running a team</a></li>
+        <li><a href="#now">Where it stands</a></li>
+      </ul>
+    </nav>
+
+    <div class="article-body">
+
+      <h2 id="start">How it started</h2>
+      <p>
+        While I was streaming, someone in my audience floated an idea: make UGC items and sell them in
+        the Roblox marketplace under the same niche my channel already covered. I had never touched 3D
+        modeling before.
+      </p>
+      <p>
+        I gave myself a day. Over about 24 hours I taught myself Blender from scratch, modeled a
+        handful of items, and published them under my group. Those items went on to earn roughly
+        <strong>6 million Robux</strong>.
+      </p>
+
+      <div class="callout">
+        <strong>Why that mattered:</strong> Roblox development has a real barrier to entry. Publishing
+        a game idea outright runs about $1,700 through their exchange system, so having currency
+        already built up is what lets you actually ship. The UGC revenue became the foundation for
+        everything after it.
+      </div>
+
+      <h2 id="economy">The Robux economy</h2>
+      <p>
+        The marketplace rewards people who already hold currency, which makes the first pile of Robux
+        by far the hardest to earn. Once I had it, I could fund development directly instead of
+        waiting on payouts, and that changed what I was able to attempt.
+      </p>
+      <p>
+        I'd already spent a long stretch learning Lua inside Roblox Studio, so I could build systems
+        myself rather than paying someone to build every piece. Between the currency and the code, I
+        could fund a title, outsource the parts that weren't a good use of my time, and keep moving.
+      </p>
+
+      <h2 id="games">The games</h2>
+      <p>
+        Here's what I've published and what state each title is in. Progress notes get updated as
+        things change.
+      </p>
+
+      <div class="game-grid">
+      <article class="game-card reveal">
+        <div class="photo-slot photo-slot--card">
+          <img src="/images/roblox-game-1.jpg" alt="Game one" loading="lazy" />
+          <span class="photo-slot-label">Photo<small>Game thumbnail</small></span>
+        </div>
+        <div class="game-body">
+          <span class="status-pill status-live">Live</span>
+          <h3>Game one</h3>
+          <p>Placeholder card. Send me the title, a one-line description, the visit count and the Roblox link, and this becomes the real entry.</p>
+          <div class="game-stats"><div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Visits</div></div><div class="stat"><div class="stat-num">Live</div><div class="stat-lbl">Status</div></div></div>
+          <span class="card-link" style="color:var(--muted);">Link coming soon</span>
+        </div>
+      </article>
+      <article class="game-card reveal">
+        <div class="photo-slot photo-slot--card">
+          <img src="/images/roblox-game-2.jpg" alt="Game two" loading="lazy" />
+          <span class="photo-slot-label">Photo<small>Game thumbnail</small></span>
+        </div>
+        <div class="game-body">
+          <span class="status-pill status-build">In development</span>
+          <h3>Game two</h3>
+          <p>Placeholder card. Same idea: title, description, and link, and I'll wire it in.</p>
+          <div class="game-stats"><div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Visits</div></div><div class="stat"><div class="stat-num">Building</div><div class="stat-lbl">Status</div></div></div>
+          <span class="card-link" style="color:var(--muted);">Link coming soon</span>
+        </div>
+      </article>
+      <article class="game-card reveal">
+        <div class="photo-slot photo-slot--card">
+          <img src="/images/roblox-game-3.jpg" alt="Game three" loading="lazy" />
+          <span class="photo-slot-label">Photo<small>Game thumbnail</small></span>
+        </div>
+        <div class="game-body">
+          <span class="status-pill status-paused">Archived</span>
+          <h3>Game three</h3>
+          <p>Placeholder card for an older title you still want listed.</p>
+          <div class="game-stats"><div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Visits</div></div><div class="stat"><div class="stat-num">Archived</div><div class="stat-lbl">Status</div></div></div>
+          <span class="card-link" style="color:var(--muted);">Link coming soon</span>
+        </div>
+      </article>
+      </div>
+
+      <h2 id="team">Running a team</h2>
+      <p>
+        Once revenue justified it, I started outsourcing work: modelers, scripters, and editors,
+        coordinated around what I actually wanted built. That's where the project-management side of
+        this got real. Scoping a feature, handing it off with enough detail that it comes back usable,
+        reviewing the result, and keeping several people moving at once is a completely different skill
+        from building it yourself.
+      </p>
+      <p>
+        It's also the most directly transferable thing I've done. The vocabulary changes on a
+        construction site, but scoping work, tracking it, and chasing down blockers is the same job.
+      </p>
+
+      <h2 id="now">Where it stands</h2>
+      <p>
+        Before AI tooling got good, I'd stepped back from hands-on development and focused on
+        coordinating other people. Now that the tooling is genuinely useful, I've started building
+        again myself, using it to move faster and cleaning up the details it gets wrong.
+      </p>
+      <p>
+        The revenue from this work is also what funded my 2019 WRX, which is a strange sentence to
+        write, but that's how it happened.
+      </p>
+
+      <div class="next-nav">
+        <a class="next-card" href="/wrx-2019/">
+          <div class="next-k">What it funded</div>
+          <div class="next-v">2019 Subaru WRX</div>
+        </a>
+        <a class="next-card" href="/#projects">
+          <div class="next-k">Back to</div>
+          <div class="next-v">All projects</div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p style="margin:0;">&copy; <span id="year"></span> Dominic Siwiec</p>
+    <div class="footer-links">
+      <a href="/#projects">Projects</a>
+      <a href="/wrx-2005/">2005 WRX</a>
+      <a href="/wrx-2019/">2019 WRX</a>
+      <a href="/roblox/">Roblox</a>
+      <a href="/future-plans/">What's next</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
