@@ -449,9 +449,9 @@ section { position: relative; }
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px 38px;
+  gap: 12px 30px;
   font-family: var(--font-head);
-  font-size: .82rem;
+  font-size: .78rem;
   font-weight: 600;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -1149,7 +1149,7 @@ section { position: relative; }
 #speedo .gauge-needle {
   stroke: var(--text);
   transform-origin: 50px 50px;
-  transition: transform .18s cubic-bezier(.22,.61,.36,1), stroke .3s ease;
+  transition: stroke .3s ease;   /* the angle is driven frame by frame in JS */
 }
 #speedo.is-redline .gauge-needle { stroke: var(--danger); }
 #speedo .gauge-hub { fill: var(--text); }
@@ -1157,7 +1157,12 @@ section { position: relative; }
 
 #speedo .gauge-readout {
   position: absolute;
-  bottom: 20px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  gap: 2px;
   font-family: var(--font-head);
   font-size: .62rem;
   font-weight: 700;
@@ -1168,6 +1173,19 @@ section { position: relative; }
   transition: color .3s ease;
 }
 #speedo.is-redline .gauge-readout { color: var(--danger); }
+#speedo .gauge-readout b {
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+  color: var(--text-mid);
+  transition: color .3s ease;
+}
+#speedo .gauge-readout i {
+  font-style: normal;
+  font-size: .46rem;
+  letter-spacing: .16em;
+}
+#speedo.is-redline .gauge-readout b { color: var(--danger); }
 
 /* ---------- Scroll reveal ---------- */
 .js-reveal .reveal {
@@ -1201,6 +1219,227 @@ section { position: relative; }
 }
 
 /* ---------- Responsive ---------- */
+
+/* ==========================================================================
+   Side rail
+   Replaces the top nav on wide screens. Reads like a gauge scale: a hairline
+   with a tick per section, and the tick for the section you are in fills in.
+   ========================================================================== */
+.rail { display: none; }
+
+.rail-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 22px 22px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: .96rem;
+  letter-spacing: -.01em;
+  color: var(--text);
+}
+.rail-brand .brand-gear { width: 18px; height: 18px; }
+.rail-brand:hover .brand-gear { animation-duration: 1.6s; color: var(--accent-dk); }
+
+.rail-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 2px;
+}
+.rail-nav::before {          /* the gauge line the ticks sit on */
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--border);
+}
+
+.rail-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 7px 18px 7px 22px;
+  font-size: .855rem;
+  color: var(--text-mid);
+  transition: color .18s ease;
+}
+.rail-tick {
+  position: absolute;
+  left: 22px;
+  width: 9px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--border-lt);
+  transition: width .2s ease, height .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.rail-num {
+  width: 16px;
+  margin-left: 16px;
+  margin-right: 8px;
+  font-family: var(--font-head);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.rail-text { flex: 1; }
+
+.rail-link:hover { color: var(--accent-dk); }
+.rail-link:hover .rail-tick { width: 13px; background: var(--accent); }
+
+.rail-link.is-active { color: var(--text); font-weight: 600; }
+.rail-link.is-active .rail-num { color: var(--accent-dk); }
+.rail-link.is-active .rail-tick {
+  width: 15px; height: 3px;
+  background: var(--accent-mid);
+  box-shadow: 0 0 0 3px var(--accent-tint);
+}
+
+.rail-link--sub {
+  font-size: .8rem;
+  color: var(--muted);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.rail-link--sub .rail-text { padding-left: 14px; }
+.rail-link--sub { letter-spacing: -.005em; }
+.rail-link--sub .rail-tick { width: 6px; opacity: .8; }
+.rail-link--sub:hover .rail-tick { width: 10px; }
+.rail-link--sub.is-active .rail-tick { width: 12px; }
+.rail-nav .rail-link--sub + .rail-link:not(.rail-link--sub) { margin-top: 12px; }
+
+.rail-foot {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 16px 22px 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: .78rem;
+}
+.rail-foot a { color: var(--muted); }
+.rail-foot a:hover { color: var(--accent-dk); }
+
+@media (min-width: 1200px) {
+  body { padding-left: 208px; }
+  .site-header { display: none; }
+  .hero { padding-top: 68px; }
+  .rail {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: 208px;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    padding: 26px 0 22px;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+/* ==========================================================================
+   Project card themes
+   Each project gets its own accent, texture and icon so the cards read apart
+   at a glance instead of blurring into one grid.
+   ========================================================================== */
+.card {
+  position: relative;
+  --card-accent: var(--accent-mid);
+  --card-accent-dk: var(--accent-dk);
+  --card-pattern: none;
+  --card-pattern-size: auto;
+}
+.card::after {                /* accent bar across the top edge */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-accent);
+  z-index: 3;
+  pointer-events: none;
+}
+.card:hover { border-color: var(--card-accent); }
+
+.card-body { position: relative; }
+.card-body::before {          /* themed texture fading in behind the kicker */
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 108px;
+  background-image: var(--card-pattern);
+  background-size: var(--card-pattern-size);
+  opacity: .55;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(#000, transparent);
+  mask-image: linear-gradient(#000, transparent);
+}
+.card-body > * { position: relative; }
+
+.card-kicker { display: flex; align-items: center; gap: 7px; color: var(--card-accent-dk); }
+.kicker-icon { flex: none; }
+.card-link { color: var(--card-accent-dk); }
+.card .stat-num { color: var(--card-accent-dk); }
+
+.card--yt {
+  --card-accent: #e0574b; --card-accent-dk: #bf3f34;
+  --card-pattern: repeating-linear-gradient(0deg, rgba(224,87,75,.14) 0 1px, transparent 1px 5px);
+}
+.card--roblox {
+  --card-accent: #7c6bd6; --card-accent-dk: #5b49b8;
+  --card-pattern: radial-gradient(rgba(124,107,214,.30) 1.3px, transparent 1.4px);
+  --card-pattern-size: 9px 9px;
+}
+.card--pc {
+  --card-accent: #2f9d94; --card-accent-dk: #1f7d75;
+  --card-pattern:
+    repeating-linear-gradient(90deg, rgba(47,157,148,.18) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(0deg,  rgba(47,157,148,.18) 0 1px, transparent 1px 10px);
+}
+.card--wrx05 {
+  --card-accent: #4a82c8; --card-accent-dk: #35659f;
+  --card-pattern: repeating-linear-gradient(115deg, rgba(74,130,200,.20) 0 7px, transparent 7px 20px);
+}
+.card--wrx19 {
+  --card-accent: #56637a; --card-accent-dk: #414d61;
+  --card-pattern: repeating-linear-gradient(115deg, rgba(86,99,122,.20) 0 7px, transparent 7px 20px);
+}
+
+/* ==========================================================================
+   Photo row variants
+   ========================================================================== */
+.photo-row--tall .photo-slot { aspect-ratio: 4 / 5; }
+.photo-row--four { grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); }
+.photo-row--mini {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+}
+.photo-row--mini .photo-slot { padding: 8px; }
+.photo-row--mini .photo-slot-label { font-size: .6rem; letter-spacing: .06em; }
+.photo-row--mini .photo-slot-label small { font-size: .66rem; }
+
+.gallery-head h3 {
+  font-family: var(--font-head);
+  font-size: 1.06rem;
+  color: var(--text);
+}
+.gallery-head p { color: var(--muted); font-size: .9rem; margin-top: 4px; max-width: 62ch; }
+
+.photo-caption {
+  color: var(--muted);
+  font-size: .87rem;
+  margin-top: 12px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border-lt);
+}
+
 @media (max-width: 960px) {
   .hero-grid,
   .about-grid,
@@ -1247,4 +1486,14 @@ section { position: relative; }
 
   #speedo { width: 82px; height: 82px; right: 14px; bottom: 14px; }
   #speedo .gauge-readout { bottom: 15px; font-size: .55rem; }
+}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 900px) {
+  .photo-row--mini { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .photo-row--mini { gap: 8px; }
+  .photo-row--mini .photo-slot-label { display: none; }
+  .gallery-head p { font-size: .86rem; }
 }
