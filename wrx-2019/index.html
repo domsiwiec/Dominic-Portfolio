@@ -28,22 +28,45 @@
   <div class="loader-wheel"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#e8edf6" stroke="#54627a" stroke-width="7"/><circle cx="50" cy="50" r="46" fill="none" stroke="#8a99b0" stroke-width="7" stroke-dasharray="7 9" opacity=".9"/><circle cx="50" cy="50" r="33" fill="#ffffff" stroke="#5b8fd0" stroke-width="3"/><g stroke="#5b8fd0" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50.0,39.0 L50.0,20.0"/><path d="M60.5,46.6 L78.5,40.7"/><path d="M56.5,58.9 L67.6,74.3"/><path d="M43.5,58.9 L32.4,74.3"/><path d="M39.5,46.6 L21.5,40.7"/></g><circle cx="50" cy="50" r="9" fill="#5b8fd0"/><circle cx="50" cy="50" r="4" fill="#ffffff"/></svg></div>
 </div>
 
-<!-- Scroll speedometer: needle redlines as you reach the end of the page -->
+<!-- Scroll tachometer: 0 to 8000, needle shakes as it climbs into the red -->
 <div id="speedo" aria-hidden="true">
   <svg viewBox="0 0 100 100">
     <circle class="gauge-track" cx="50" cy="50" r="34" fill="none" stroke-width="6"
             stroke-linecap="round" stroke-dasharray="142.42 213.63" transform="rotate(150 50 50)"/>
     <circle class="gauge-red" cx="50" cy="50" r="34" fill="none" stroke-width="6"
-            stroke-linecap="round" stroke-dasharray="28.48 213.63" transform="rotate(342 50 50)"/>
+            stroke-linecap="round" stroke-dasharray="26.70 213.63" transform="rotate(345 50 50)"/>
     <circle class="gauge-fill" data-arc="142.419" cx="50" cy="50" r="34" fill="none" stroke-width="6"
             stroke-linecap="round" stroke-dasharray="142.419 213.628" stroke-dashoffset="142.419"
             transform="rotate(150 50 50)"/>
-    <g class="gauge-tick" stroke-width="1.6" stroke-linecap="round"><path d="M30.95,61.00 L24.45,64.75"/><path d="M26.13,52.51 L20.66,53.08"/><path d="M27.17,42.58 L21.94,40.88"/><path d="M32.16,33.94 L28.08,30.26"/><path d="M40.24,28.07 L38.00,23.05"/><path d="M50.00,28.00 L50.00,20.50"/><path d="M59.76,28.07 L62.00,23.05"/><path d="M67.84,33.94 L71.92,30.26"/><path d="M72.83,42.58 L78.06,40.88"/><path d="M73.87,52.51 L79.34,53.08"/><path d="M69.05,61.00 L75.55,64.75"/></g>
+    <g class="gauge-tick" stroke-width="1.6" stroke-linecap="round"><path d="M31.38,60.75 L24.45,64.75"/><path d="M26.00,50.00 L20.50,50.00"/><path d="M31.38,39.25 L24.45,35.25"/><path d="M38.00,29.22 L35.25,24.45"/><path d="M50.00,28.50 L50.00,20.50"/><path d="M62.00,29.22 L64.75,24.45"/><path d="M68.62,39.25 L75.55,35.25"/><path d="M74.00,50.00 L79.50,50.00"/><path d="M68.62,60.75 L75.55,64.75"/></g>
     <path class="gauge-needle" d="M50,50 L50,22" stroke-width="2.6" stroke-linecap="round"/>
     <circle class="gauge-hub" cx="50" cy="50" r="3.6"/>
   </svg>
-  <span class="gauge-readout">0</span>
+  <span class="gauge-readout"><b data-rpm>0</b><i>rpm</i></span>
 </div>
+
+<!-- Fixed side rail: replaces the top nav on wide screens -->
+<aside class="rail" id="rail">
+  <a class="rail-brand" href="/"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg><span>Dominic Siwiec</span></a>
+  <nav class="rail-nav" id="railNav" aria-label="Sections">
+    <a class="rail-link" href="/#about"><span class="rail-tick"></span><span class="rail-num">01</span><span class="rail-text">About</span></a>
+    <a class="rail-link" href="/#experience"><span class="rail-tick"></span><span class="rail-num">02</span><span class="rail-text">Experience</span></a>
+    <a class="rail-link" href="/#projects"><span class="rail-tick"></span><span class="rail-num">03</span><span class="rail-text">Projects</span></a>
+    <a class="rail-link rail-link--sub" href="/#youtube"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">YouTube channel</span></a>
+    <a class="rail-link rail-link--sub" href="/#roblox" data-match="/roblox/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Roblox studio</span></a>
+    <a class="rail-link rail-link--sub" href="/#hardware"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Builds & resale</span></a>
+    <a class="rail-link rail-link--sub" href="/#wrx-2005" data-match="/wrx-2005/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2005 WRX</span></a>
+    <a class="rail-link rail-link--sub" href="/#wrx-2019" data-match="/wrx-2019/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2019 WRX</span></a>
+    <a class="rail-link" href="/#swimming"><span class="rail-tick"></span><span class="rail-num">04</span><span class="rail-text">Swimming</span></a>
+    <a class="rail-link" href="/future-plans/"><span class="rail-tick"></span><span class="rail-num">05</span><span class="rail-text">What's next</span></a>
+    <a class="rail-link" href="/#contact"><span class="rail-tick"></span><span class="rail-num">06</span><span class="rail-text">Contact</span></a>
+  </nav>
+  <div class="rail-foot">
+    <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.swimcloud.com/swimmer/1989784/" target="_blank" rel="noopener">SwimCloud</a>
+  </div>
+</aside>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
@@ -82,10 +105,28 @@
 </section>
 
 <div class="wrap" style="margin-top:40px;">
-  <div class="photo-slot photo-slot--wide">
-          <img src="/images/wrx-2019-hero.jpg" alt="2019 Subaru WRX" loading="lazy" />
-          <span class="photo-slot-label">Hero photo<small>The car today, wide shot</small></span>
+  <div class="gallery-head">
+    <h3>How it looked in the listing</h3>
+    <p>The four photos the auction gave me. This is everything I had to go on before I bid.</p>
+  </div>
+  <div class="photo-row photo-row--four">
+    <div class="photo-slot">
+          <img src="/images/wrx-2019-auction-1.jpg" alt="2019 Subaru WRX at auction, front" loading="lazy" />
+          <span class="photo-slot-label">Auction 1<small>Front</small></span>
         </div>
+    <div class="photo-slot">
+          <img src="/images/wrx-2019-auction-2.jpg" alt="2019 Subaru WRX at auction, front three quarter" loading="lazy" />
+          <span class="photo-slot-label">Auction 2<small>Front three quarter</small></span>
+        </div>
+    <div class="photo-slot">
+          <img src="/images/wrx-2019-auction-3.jpg" alt="2019 Subaru WRX at auction, rear three quarter" loading="lazy" />
+          <span class="photo-slot-label">Auction 3<small>Rear three quarter</small></span>
+        </div>
+    <div class="photo-slot">
+          <img src="/images/wrx-2019-auction-4.jpg" alt="2019 Subaru WRX at auction, side" loading="lazy" />
+          <span class="photo-slot-label">Auction 4<small>Side</small></span>
+        </div>
+  </div>
 </div>
 
 <div class="article">
@@ -189,9 +230,18 @@
 
       <div class="photo-row">
         <div class="photo-slot">
-          <img src="/images/wrx-2019-interior-before.jpg" alt="Stripped interior" loading="lazy" />
-          <span class="photo-slot-label">Interior, before<small>Stripped out</small></span>
+          <img src="/images/wrx-2019-interior-1.jpg" alt="Stripped interior, passenger side" loading="lazy" />
+          <span class="photo-slot-label">Interior, before<small>As bought</small></span>
         </div>
+        <div class="photo-slot">
+          <img src="/images/wrx-2019-interior-2.jpg" alt="Stripped interior, driver side" loading="lazy" />
+          <span class="photo-slot-label">Interior, before<small>As bought</small></span>
+        </div>
+      </div>
+      <p class="photo-caption">What I actually picked up. No seats, no carpet, no trim, and a wiring
+      harness left hanging where the console used to be.</p>
+
+      <div class="photo-row">
         <div class="photo-slot">
           <img src="/images/wrx-2019-interior-during.jpg" alt="Interior going back in" loading="lazy" />
           <span class="photo-slot-label">Interior, during<small>Parts going in</small></span>
