@@ -66,6 +66,28 @@
       });
     }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });
     Array.prototype.forEach.call(revealEls, function (el) { revealObserver.observe(el); });
+
+    // Safety net: a fast scroll can jump an element clean past the viewport
+    // before the observer fires, so sweep anything already scrolled into view.
+    var sweeping = false;
+    var sweep = function () {
+      sweeping = false;
+      var left = 0;
+      Array.prototype.forEach.call(revealEls, function (el) {
+        if (el.classList.contains('is-visible')) return;
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('is-visible');
+          revealObserver.unobserve(el);
+        } else { left++; }
+      });
+      if (!left) window.removeEventListener('scroll', onSweep);
+    };
+    var onSweep = function () {
+      if (sweeping) return;
+      sweeping = true;
+      window.requestAnimationFrame(sweep);
+    };
+    window.addEventListener('scroll', onSweep, { passive: true });
   }
 
   /* ---------- Highlight the nav link for the section in view ---------- */
@@ -91,39 +113,140 @@
   }
 
   /* ======================================================================
-     Speedometer scroll gauge
-     The needle sweeps a 240 degree arc as you scroll and drops into the
-     red band over the last fifth of the page.
+     Scroll tachometer
+     The needle sweeps a 240 degree arc from 0 to 8000 as you scroll, and
+     starts shaking as it climbs into the red band near the end of the page.
      ====================================================================== */
   var speedo = document.getElementById('speedo');
   if (speedo) {
-    var needle   = speedo.querySelector('.gauge-needle');
-    var fill     = speedo.querySelector('.gauge-fill');
-    var readout  = speedo.querySelector('.gauge-readout');
-    var SWEEP    = 240;          // degrees of travel
-    var START    = -120;         // needle drawn pointing up, so 0% sits at lower-left
-    var ARC_LEN  = parseFloat(fill && fill.getAttribute('data-arc')) || 0;
-    var ticking  = false;
+    var needle  = speedo.querySelector('.gauge-needle');
+    var fill    = speedo.querySelector('.gauge-fill');
+    var rpmEl   = speedo.querySelector('[data-rpm]');
+    var SWEEP   = 240;          // degrees of travel
+    var START   = -120;         // needle drawn pointing up, so 0 sits at lower-left
+    var MAX_RPM = 8000;
+    var REDLINE = 6500;
+    var SHAKE_FROM = 0.62;      // shake starts a bit past halfway
+    var MAX_SHAKE  = 3.4;       // degrees at full song
+    var ARC_LEN = parseFloat(fill && fill.getAttribute('data-arc')) || 0;
 
-    var render = function () {
+    var target = 0, shown = 0, raf = null, ticking = false;
+
+    var readPct = function () {
       var max = document.documentElement.scrollHeight - window.innerHeight;
-      var pct = max > 8 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+      return max > 8 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+    };
 
-      if (needle) needle.style.transform = 'rotate(' + (START + pct * SWEEP) + 'deg)';
-      if (fill && ARC_LEN) fill.style.strokeDashoffset = String(ARC_LEN * (1 - pct));
-      if (readout) readout.textContent = Math.round(pct * 100);
+    var setRpm = function (v) {
+      if (!rpmEl) return;
+      v = Math.max(0, Math.min(MAX_RPM, Math.round(v / 25) * 25));
+      rpmEl.textContent = v.toLocaleString('en-US');
+    };
 
-      speedo.classList.toggle('is-redline', pct >= 0.8);
+    var paintTrack = function () {
+      if (fill && ARC_LEN) fill.style.strokeDashoffset = String(ARC_LEN * (1 - target));
+      speedo.classList.toggle('is-redline', target * MAX_RPM >= REDLINE);
       speedo.classList.toggle('is-on', window.scrollY > 60);
-      ticking = false;
+    };
+
+    var frame = function (now) {
+      // ease the needle toward wherever the scroll position put it
+      shown += (target - shown) * 0.17;
+      if (Math.abs(target - shown) < 0.0004) shown = target;
+
+      // shake ramps in over the last third and peaks at the top of the range
+      var t = Math.min(Math.max((shown - SHAKE_FROM) / (1 - SHAKE_FROM), 0), 1);
+      var amp = t * t * MAX_SHAKE;
+      var wob = amp
+        ? (Math.sin(now * 0.047) * 0.55 + Math.sin(now * 0.131) * 0.30 +
+           (Math.random() - 0.5) * 0.50) * amp
+        : 0;
+
+      needle.style.transform = 'rotate(' + (START + shown * SWEEP + wob).toFixed(2) + 'deg)';
+      setRpm(shown * MAX_RPM + (wob * 0.4 / SWEEP) * MAX_RPM);
+
+      raf = (amp > 0.02 || shown !== target) ? window.requestAnimationFrame(frame) : null;
+    };
+
+    var kick = function () {
+      if (!raf) raf = window.requestAnimationFrame(frame);
+    };
+
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        target = readPct();
+        paintTrack();
+        ticking = false;
+        if (reduceMotion) {
+          shown = target;
+          needle.style.transform = 'rotate(' + (START + shown * SWEEP) + 'deg)';
+          setRpm(shown * MAX_RPM);
+        } else {
+          kick();
+        }
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ======================================================================
+     Side rail: light up the section you are actually looking at
+     ====================================================================== */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.rail-link'));
+    if (!links.length) return;
+
+    var here = location.pathname.replace(/index\.html$/, '');
+    if (here.length > 1 && here.charAt(here.length - 1) !== '/') here += '/';
+
+    var pairs = [];
+    links.forEach(function (a) {
+      var href = a.getAttribute('href') || '';
+      var i    = href.indexOf('#');
+      var path = (i < 0 ? href : href.slice(0, i)) || '/';
+      var hash = i < 0 ? '' : href.slice(i + 1);
+
+      var match = a.getAttribute('data-match');
+      if (match && match === here) { a.classList.add('is-active'); }
+      if (path !== here) return;                 // link points at another page
+      if (!hash) { a.classList.add('is-active'); return; }   // this page itself
+      var el = document.getElementById(hash);
+      if (el) pairs.push({ link: a, el: el });
+    });
+
+    if (pairs.length < 2) return;
+    pairs.sort(function (x, y) {
+      return x.el.getBoundingClientRect().top - y.el.getBoundingClientRect().top;
+    });
+
+    var pending = false;
+    var mark = function () {
+      pending = false;
+      var line = window.scrollY + window.innerHeight * 0.34;
+      var best = null;
+      for (var i = 0; i < pairs.length; i++) {
+        if (pairs[i].el.getBoundingClientRect().top + window.scrollY <= line) best = pairs[i];
+      }
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 6) {
+        best = pairs[pairs.length - 1];
+      }
+      if (!best) best = pairs[0];
+      pairs.forEach(function (p) { p.link.classList.toggle('is-active', p === best); });
     };
 
     window.addEventListener('scroll', function () {
-      if (!ticking) { ticking = true; window.requestAnimationFrame(render); }
+      if (pending) return;
+      pending = true;
+      window.requestAnimationFrame(mark);
     }, { passive: true });
-    window.addEventListener('resize', render, { passive: true });
-    render();
-  }
+    window.addEventListener('resize', mark, { passive: true });
+    mark();
+  })();
 
   /* ======================================================================
      Cursor-reactive background wash
