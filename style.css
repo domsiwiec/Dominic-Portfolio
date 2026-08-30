@@ -1226,15 +1226,18 @@ section { position: relative; }
    with a tick per section, and the tick for the section you are in fills in.
    ========================================================================== */
 .rail { display: none; }
+:root { --rail-w: 178px; }
+@media (min-width: 1200px) { :root { --rail-w: 208px; } }
 
 .rail-brand {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 0 22px 22px;
+  padding: 0 18px 20px;
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: .96rem;
+  font-size: .88rem;
+  line-height: 1.25;
   letter-spacing: -.01em;
   color: var(--text);
 }
@@ -1251,7 +1254,7 @@ section { position: relative; }
 .rail-nav::before {          /* the gauge line the ticks sit on */
   content: "";
   position: absolute;
-  left: 26px;
+  left: 24px;
   top: 12px;
   bottom: 12px;
   width: 1px;
@@ -1262,14 +1265,14 @@ section { position: relative; }
   position: relative;
   display: flex;
   align-items: center;
-  padding: 7px 18px 7px 22px;
-  font-size: .855rem;
+  padding: 7px 14px 7px 20px;
+  font-size: .83rem;
   color: var(--text-mid);
   transition: color .18s ease;
 }
 .rail-tick {
   position: absolute;
-  left: 22px;
+  left: 20px;
   width: 9px;
   height: 2px;
   border-radius: 2px;
@@ -1277,9 +1280,9 @@ section { position: relative; }
   transition: width .2s ease, height .2s ease, background .2s ease, box-shadow .2s ease;
 }
 .rail-num {
-  width: 16px;
-  margin-left: 16px;
-  margin-right: 8px;
+  width: 15px;
+  margin-left: 18px;
+  margin-right: 7px;
   font-family: var(--font-head);
   font-size: .64rem;
   font-weight: 700;
@@ -1306,7 +1309,8 @@ section { position: relative; }
   padding-top: 4px;
   padding-bottom: 4px;
 }
-.rail-link--sub .rail-text { padding-left: 14px; }
+.rail-link--sub { padding-left: 44px; }
+.rail-link--sub .rail-num { display: none; }
 .rail-link--sub { letter-spacing: -.005em; }
 .rail-link--sub .rail-tick { width: 6px; opacity: .8; }
 .rail-link--sub:hover .rail-tick { width: 10px; }
@@ -1317,7 +1321,7 @@ section { position: relative; }
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin: 16px 22px 0;
+  margin: 16px 18px 0;
   padding-top: 16px;
   border-top: 1px solid var(--border);
   font-size: .78rem;
@@ -1325,14 +1329,14 @@ section { position: relative; }
 .rail-foot a { color: var(--muted); }
 .rail-foot a:hover { color: var(--accent-dk); }
 
-@media (min-width: 1200px) {
-  body { padding-left: 208px; }
+@media (min-width: 860px) {
+  body { padding-left: var(--rail-w); }
   .site-header { display: none; }
   .hero { padding-top: 68px; }
   .rail {
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    width: 208px;
+    width: var(--rail-w);
     z-index: 80;
     display: flex;
     flex-direction: column;
