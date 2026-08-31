@@ -1315,7 +1315,32 @@ section { position: relative; }
 .rail-link--sub .rail-tick { width: 6px; opacity: .8; }
 .rail-link--sub:hover .rail-tick { width: 10px; }
 .rail-link--sub.is-active .rail-tick { width: 12px; }
-.rail-nav .rail-link--sub + .rail-link:not(.rail-link--sub) { margin-top: 12px; }
+/* collapsible groups */
+.rail-row { display: flex; align-items: center; }
+.rail-row .rail-link { flex: 1; min-width: 0; }
+
+.rail-caret {
+  flex: none;
+  width: 24px; height: 24px;
+  margin-right: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: 6px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .22s ease, color .18s ease, background .18s ease;
+}
+.rail-caret:hover { color: var(--accent-dk); background: var(--accent-tint); }
+.rail-caret:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.rail-group.is-open > .rail-row .rail-caret { transform: rotate(180deg); }
+
+.rail-sub { display: none; padding-bottom: 2px; }
+.rail-group.is-open .rail-sub { display: block; }
+.rail-group.is-open { margin-bottom: 8px; }
 
 .rail-foot {
   display: flex;
@@ -1419,6 +1444,11 @@ section { position: relative; }
    Photo row variants
    ========================================================================== */
 .photo-row--tall .photo-slot { aspect-ratio: 4 / 5; }
+
+/* one photo standing on its own, for a portrait shot that carries a section */
+.photo-feature { max-width: 460px; margin: 0 auto; }
+.photo-feature .photo-slot { aspect-ratio: 3 / 4; }
+.photo-feature .photo-caption { text-align: center; border: 0; padding-left: 0; }
 .photo-row--four { grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); }
 .photo-row--mini {
   grid-template-columns: repeat(3, 1fr);
