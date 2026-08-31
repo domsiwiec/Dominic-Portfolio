@@ -1338,6 +1338,13 @@ section { position: relative; }
 .rail-caret:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .rail-group.is-open > .rail-row .rail-caret { transform: rotate(180deg); }
 
+/* a group that leaves the page sits below the numbered sections */
+.rail-group--offsite {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
 .rail-sub { display: none; padding-bottom: 2px; }
 .rail-group.is-open .rail-sub { display: block; }
 .rail-group.is-open { margin-bottom: 8px; }
