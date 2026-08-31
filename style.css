@@ -1317,12 +1317,12 @@ section { position: relative; }
 .rail-link--sub.is-active .rail-tick { width: 12px; }
 /* collapsible groups */
 .rail-row { display: flex; align-items: center; }
-.rail-row .rail-link { flex: 1; min-width: 0; }
+.rail-row .rail-link { flex: 1; min-width: 0; padding-right: 2px; }
 
 .rail-caret {
   flex: none;
-  width: 24px; height: 24px;
-  margin-right: 8px;
+  width: 22px; height: 22px;
+  margin-right: 5px;
   padding: 0;
   border: 0;
   background: none;
