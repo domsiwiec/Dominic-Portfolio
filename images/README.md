@@ -12,9 +12,10 @@ and swaps the placeholder out on its own.
 | File | Used on | Slot |
 |---|---|---|
 | dominic-main.jpg | home | Hero collage, large photo |
-| dominic-2.jpg, dominic-3.jpg | home | Hero collage, squares |
-| dominic-lake.jpg | home | Wide banner under About |
-| dominic-wide.jpg | spare | Wide banner, not placed yet |
+| dominic-2.jpg | home | Hero collage, bottom left square |
+| dominic-lake.jpg | home | Hero collage, bottom right square |
+| dominic-wide.jpg | home | Wide banner under About |
+| dominic-3.jpg | spare | Not placed |
 | og-preview.jpg | all pages | Link preview image, 1200x630 |
 | swim-wide.jpg | home | Swimming, wide banner |
 | swim-1.jpg, swim-2.jpg, swim-3.jpg | home | Swimming, three-up row |
