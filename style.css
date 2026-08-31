@@ -1226,7 +1226,7 @@ section { position: relative; }
    with a tick per section, and the tick for the section you are in fills in.
    ========================================================================== */
 .rail { display: none; }
-:root { --rail-w: 178px; }
+:root { --rail-w: 186px; }
 @media (min-width: 1200px) { :root { --rail-w: 208px; } }
 
 .rail-brand {
@@ -1377,7 +1377,14 @@ section { position: relative; }
     border-right: 1px solid var(--border);
     overflow-y: auto;
     overscroll-behavior: contain;
+    /* a full width scrollbar eats enough room to wrap the labels */
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-lt) transparent;
   }
+  .rail::-webkit-scrollbar { width: 6px; }
+  .rail::-webkit-scrollbar-track { background: transparent; }
+  .rail::-webkit-scrollbar-thumb { background: var(--border-lt); border-radius: 3px; }
+  .rail:hover::-webkit-scrollbar-thumb { background: var(--muted); }
 }
 
 /* ==========================================================================
