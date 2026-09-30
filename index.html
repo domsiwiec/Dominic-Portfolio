@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +12,7 @@
 <meta property="og:description" content="Dominic Siwiec is a Construction Engineering student at Iowa State University. Field engineering at McGough, Roblox game development, Subaru builds, and twelve years of competitive swimming." />
 <meta property="og:image" content="https://dominicsiwiec.com/images/og-preview.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="alternate icon" type="image/png" href="/favicon.png" />
-<link rel="stylesheet" href="/style.css" />
+<link rel="preload" as="image" href="/images/dominic-main.jpg" fetchpriority="high" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,7 +26,6 @@
     { "@type": "CollegeOrUniversity", "name": "Iowa State University" },
     { "@type": "HighSchool", "name": "Huntley High School" }
   ],
-  "worksFor": { "@type": "Organization", "name": "McGough" },
   "homeLocation": { "@type": "Place", "name": "Lake in the Hills, Illinois" },
   "sameAs": [
     "https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/",
@@ -38,20 +35,30 @@
   ]
 }
 </script>
-<script>(function(){var d=document.documentElement;d.classList.add('js-reveal');try{if(sessionStorage.getItem('ds_seen'))d.classList.add('fast-load');sessionStorage.setItem('ds_seen','1');}catch(e){}})();</script>
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0b0b0d" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="alternate icon" type="image/png" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" />
+<link rel="stylesheet" href="/style.css" />
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('ds_theme')}catch(e){}d.setAttribute('data-theme',t==='light'?'light':'dark');d.classList.add('js-reveal');try{if(sessionStorage.getItem('ds_seen'))d.classList.add('fast-load');sessionStorage.setItem('ds_seen','1')}catch(e){}})();</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <div id="cursor-glow" aria-hidden="true"></div>
 
-<!-- Wheel loader: dismisses itself via CSS, no JS required -->
+<!-- Loader: a TE37 rolls across, then the page. Dismisses itself in CSS. -->
 <div id="loader" aria-hidden="true">
   <div class="loader-road"></div>
   <div class="loader-streaks"><span></span><span></span><span></span></div>
-  <div class="loader-wheel"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#e8edf6" stroke="#54627a" stroke-width="7"/><circle cx="50" cy="50" r="46" fill="none" stroke="#8a99b0" stroke-width="7" stroke-dasharray="7 9" opacity=".9"/><circle cx="50" cy="50" r="33" fill="#ffffff" stroke="#5b8fd0" stroke-width="3"/><g stroke="#5b8fd0" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50.0,39.0 L50.0,20.0"/><path d="M60.5,46.6 L78.5,40.7"/><path d="M56.5,58.9 L67.6,74.3"/><path d="M43.5,58.9 L32.4,74.3"/><path d="M39.5,46.6 L21.5,40.7"/></g><circle cx="50" cy="50" r="9" fill="#5b8fd0"/><circle cx="50" cy="50" r="4" fill="#ffffff"/></svg></div>
+  <div class="loader-wheel"><svg class="te37" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><radialGradient id="teBarrel" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#050506"/><stop offset="1" stop-color="#16161a"/></radialGradient></defs><g class="w-spin"><circle cx="100" cy="100" r="98" fill="#141417"/><circle cx="100" cy="100" r="95.5" fill="none" stroke="#1f1f23" stroke-width="5" stroke-dasharray="3.2 4.3"/><circle cx="100" cy="100" r="88" fill="none" stroke="#202024" stroke-width="1"/><circle cx="100" cy="100" r="80.5" fill="url(#teBarrel)"/></g><circle cx="100" cy="100" r="60" fill="#3a3a40"/><circle cx="100" cy="100" r="54" fill="none" stroke="#2e2e33" stroke-width="1.2"/><circle cx="100" cy="100" r="33" fill="#26262b"/><path class="w-caliper" d="M120.70,36.28 A67,67 0 0 1 165.54,86.07 L143.04,90.85 A44,44 0 0 0 113.60,58.15 Z"/><path d="M132.00,44.57 A64,64 0 0 1 158.47,73.97 L142.94,80.88 A47,47 0 0 0 123.50,59.30 Z" fill="#000" opacity=".18"/><g class="w-spin"><circle cx="100" cy="100" r="76.5" fill="none" stroke="#1d1d21" stroke-width="7"/><circle cx="100" cy="100" r="79.6" fill="none" stroke="#4d4d56" stroke-width=".9"/><circle cx="100" cy="100" r="73.2" fill="none" stroke="#08080a" stroke-width="1"/><g fill="#1c1c20" stroke="#0a0a0c" stroke-width=".8" stroke-linejoin="round"><path d="M90.60,80.00 L109.40,80.00 L114.60,25.50 L85.40,25.50 Z"/><path d="M112.62,81.86 L122.02,98.14 L171.82,75.39 L157.22,50.11 Z"/><path d="M122.02,101.86 L112.62,118.14 L157.22,149.89 L171.82,124.61 Z"/><path d="M109.40,120.00 L90.60,120.00 L85.40,174.50 L114.60,174.50 Z"/><path d="M87.38,118.14 L77.98,101.86 L28.18,124.61 L42.78,149.89 Z"/><path d="M77.98,98.14 L87.38,81.86 L42.78,50.11 L28.18,75.39 Z"/></g><g fill="none" stroke="#3b3b43" stroke-width="1.1" stroke-linecap="round"><path d="M91.70,77.00 L86.80,26.50"/><path d="M115.77,81.31 L157.05,51.82"/><path d="M124.07,104.31 L170.25,125.32"/><path d="M108.30,123.00 L113.20,173.50"/><path d="M84.23,118.69 L42.95,148.18"/><path d="M75.93,95.69 L29.75,74.68"/></g><g fill="none" stroke="#0c0c0e" stroke-width="1.3"><path d="M86.80,34.50 L113.20,34.50"/><path d="M150.12,55.82 L163.32,78.68"/><path d="M163.32,121.32 L150.12,144.18"/><path d="M113.20,165.50 L86.80,165.50"/><path d="M49.88,144.18 L36.68,121.32"/><path d="M36.68,78.68 L49.88,55.82"/></g><circle cx="100" cy="100" r="22.5" fill="#1a1a1e" stroke="#2c2c32" stroke-width="1.2"/><g fill="#5a5a63"><circle cx="107.64" cy="89.48" r="3"/><circle cx="112.36" cy="104.02" r="3"/><circle cx="100.00" cy="113.00" r="3"/><circle cx="87.64" cy="104.02" r="3"/><circle cx="92.36" cy="89.48" r="3"/></g><g fill="#26262b"><circle cx="107.64" cy="89.48" r="1.2"/><circle cx="112.36" cy="104.02" r="1.2"/><circle cx="100.00" cy="113.00" r="1.2"/><circle cx="87.64" cy="104.02" r="1.2"/><circle cx="92.36" cy="89.48" r="1.2"/></g><circle cx="100" cy="100" r="7" fill="#101013" stroke="#34343b" stroke-width="1"/><circle cx="100" cy="100" r="3" fill="#2a2a30"/></g></svg></div>
 </div>
 
-<!-- Scroll tachometer: 0 to 8000, needle shakes as it climbs into the red -->
+<!-- Scroll tachometer -->
 <div id="speedo" aria-hidden="true">
   <svg viewBox="0 0 100 100">
     <circle class="gauge-track" cx="50" cy="50" r="34" fill="none" stroke-width="6"
@@ -68,21 +75,20 @@
   <span class="gauge-readout"><b data-rpm>0</b><i>rpm</i></span>
 </div>
 
-<!-- Fixed side rail: replaces the top nav on wide screens -->
-<aside class="rail" id="rail">
-  <a class="rail-brand" href="/"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg><span>Dominic Siwiec</span></a>
+<aside class="rail" id="rail" aria-label="Site">
+  <a class="rail-brand" href="/"><svg class="brand-wheel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="16"/><g fill="currentColor"><path d="M90.50,78.00 L109.50,78.00 L115.00,24.00 L85.00,24.00 Z"/><path d="M114.30,80.77 L123.80,97.23 L173.32,74.99 L158.32,49.01 Z"/><path d="M123.80,102.77 L114.30,119.23 L158.32,150.99 L173.32,125.01 Z"/><path d="M109.50,122.00 L90.50,122.00 L85.00,176.00 L115.00,176.00 Z"/><path d="M85.70,119.23 L76.20,102.77 L26.68,125.01 L41.68,150.99 Z"/><path d="M76.20,97.23 L85.70,80.77 L41.68,49.01 L26.68,74.99 Z"/><circle cx="100" cy="100" r="27"/></g></svg><span>Dominic Siwiec</span></a>
   <nav class="rail-nav" id="railNav" aria-label="Sections">
       <a class="rail-link" href="/#about"><span class="rail-tick"></span><span class="rail-num">01</span><span class="rail-text">About</span></a>
       <a class="rail-link" href="/#experience"><span class="rail-tick"></span><span class="rail-num">02</span><span class="rail-text">Experience</span></a>
     <div class="rail-group" data-group="projects">
       <div class="rail-row">
       <a class="rail-link" href="/#projects"><span class="rail-tick"></span><span class="rail-num">03</span><span class="rail-text">Projects</span></a>
-        <button class="rail-caret" type="button" aria-expanded="false" aria-label="Show Projects links"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10l4 4 4-4"/></svg></button>
+      <button class="rail-caret" type="button" aria-label="Show Projects pages" aria-expanded="false"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
       </div>
       <div class="rail-sub">
       <a class="rail-link rail-link--sub" href="/#youtube"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">YouTube</span></a>
       <a class="rail-link rail-link--sub" href="/#roblox" data-match="/roblox/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Roblox</span></a>
-      <a class="rail-link rail-link--sub" href="/#hardware"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Builds & resale</span></a>
+      <a class="rail-link rail-link--sub" href="/#hardware"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Builds &amp; resale</span></a>
       <a class="rail-link rail-link--sub" href="/#wrx-2005" data-match="/wrx-2005/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2005 WRX</span></a>
       <a class="rail-link rail-link--sub" href="/#wrx-2019" data-match="/wrx-2019/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2019 WRX</span></a>
       </div>
@@ -93,7 +99,7 @@
     <div class="rail-group rail-group--offsite" data-group="next">
       <div class="rail-row">
       <a class="rail-link" href="/future-plans/" data-match="/future-plans/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">What's next</span></a>
-        <button class="rail-caret" type="button" aria-expanded="false" aria-label="Show What's next links"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10l4 4 4-4"/></svg></button>
+      <button class="rail-caret" type="button" aria-label="Show What's next pages" aria-expanded="false"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
       </div>
       <div class="rail-sub">
       <a class="rail-link rail-link--sub" href="/future-plans/#rally"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">The rally goal</span></a>
@@ -106,645 +112,310 @@
     <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">YouTube</a>
     <a href="https://www.instagram.com/dom_siwiec/" target="_blank" rel="noopener">Instagram</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><svg class="ic ic-sun" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><svg class="ic ic-moon" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg><span class="theme-toggle-text" data-theme-label>Light mode</span></button>
   </div>
 </aside>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
-    <a href="#top" class="brand"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg>Dominic Siwiec</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <a href="#top" class="brand"><svg class="brand-wheel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="16"/><g fill="currentColor"><path d="M90.50,78.00 L109.50,78.00 L115.00,24.00 L85.00,24.00 Z"/><path d="M114.30,80.77 L123.80,97.23 L173.32,74.99 L158.32,49.01 Z"/><path d="M123.80,102.77 L114.30,119.23 L158.32,150.99 L173.32,125.01 Z"/><path d="M109.50,122.00 L90.50,122.00 L85.00,176.00 L115.00,176.00 Z"/><path d="M85.70,119.23 L76.20,102.77 L26.68,125.01 L41.68,150.99 Z"/><path d="M76.20,97.23 L85.70,80.77 L41.68,49.01 L26.68,74.99 Z"/><circle cx="100" cy="100" r="27"/></g></svg><span>Dominic Siwiec</span></a>
+    <button class="theme-toggle theme-toggle--compact" type="button" data-theme-toggle aria-label="Switch to light mode"><svg class="ic ic-sun" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><svg class="ic ic-moon" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg><span class="theme-toggle-text" data-theme-label>Light mode</span></button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#swimming">Swimming</a>
       <a href="#endurance">Endurance</a>
       <a href="#contact">Contact</a>
+      <a href="/future-plans/">What's next</a>
     </nav>
   </div>
 </header>
 
-<!-- ==================== HERO ==================== -->
+<main id="main">
+
 <section class="hero" id="top">
+  <div class="hero-wheel" aria-hidden="true"><svg class="te37-ghost" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width=".6"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="80.5"/><circle cx="100" cy="100" r="73.2"/><path d="M90.60,80.00 L109.40,80.00 L114.60,25.50 L85.40,25.50 Z"/><path d="M112.62,81.86 L122.02,98.14 L171.82,75.39 L157.22,50.11 Z"/><path d="M122.02,101.86 L112.62,118.14 L157.22,149.89 L171.82,124.61 Z"/><path d="M109.40,120.00 L90.60,120.00 L85.40,174.50 L114.60,174.50 Z"/><path d="M87.38,118.14 L77.98,101.86 L28.18,124.61 L42.78,149.89 Z"/><path d="M77.98,98.14 L87.38,81.86 L42.78,50.11 L28.18,75.39 Z"/><circle cx="100" cy="100" r="26"/><circle cx="108.52" cy="88.27" r="3.3"/><circle cx="113.79" cy="104.48" r="3.3"/><circle cx="100.00" cy="114.50" r="3.3"/><circle cx="86.21" cy="104.48" r="3.3"/><circle cx="91.48" cy="88.27" r="3.3"/><circle cx="100" cy="100" r="8.5"/></g></svg></div>
   <div class="wrap hero-grid">
-    <div>
-      <span class="hero-eyebrow"><span class="pulse"></span>Iowa State University &middot; Class of 2027</span>
-      <h1>Dominic <span class="accent">Siwiec</span></h1>
-      <p class="hero-role">Construction Engineering student, field engineer, and builder of things that probably shouldn't have worked</p>
-      <p class="hero-blurb">
-        I study construction engineering with a mechanical emphasis at Iowa State, and I spend most of
-        my time outside class taking things apart to figure out how they go back together: engines,
-        game economies, gaming PCs, and a 20-year-old Subaru that was mostly rust when I bought it.
-      </p>
+    <div class="hero-copy">
+      <p class="eyebrow">Iowa State University &middot; Class of 2027</p>
+      <h1 class="hero-title">Dominic <span class="accent">Siwiec</span></h1>
+      <p class="hero-sub">Construction engineering student, field engineer, and builder of things that probably shouldn't have worked.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See what I've built <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#projects" class="btn btn-primary">See the garage <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
-      <div class="hero-meta">
-        <span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Lake in the Hills, Illinois
-        </span>
-        <span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-          Field Engineering Co-op at McGough &middot; 2026
-        </span>
-      </div>
     </div>
-
     <div class="collage">
-      <div class="photo-slot">
-          <img src="/images/dominic-main.jpg" alt="Dominic Siwiec" loading="lazy" />
-          <span class="photo-slot-label">Photo 1<small>Main</small></span>
-        </div>
-      <div class="photo-slot">
-          <img src="/images/dominic-2.jpg" alt="Dominic Siwiec" loading="lazy" />
-          <span class="photo-slot-label">Photo 2<small>Square</small></span>
-        </div>
-      <div class="photo-slot">
-          <img src="/images/dominic-lake.jpg" alt="Dominic Siwiec at the lake" loading="lazy" style="object-position:38% 50%" />
-          <span class="photo-slot-label">Photo 3<small>Square</small></span>
-        </div>
+      <div class="photo-slot collage-main"><img src="/images/dominic-main.jpg" alt="Dominic Siwiec" width="1100" height="756" fetchpriority="high" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+      <div class="photo-slot collage-a"><img src="/images/dominic-2.jpg" alt="Dominic Siwiec on the boardwalk" width="900" height="900" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+      <div class="photo-slot collage-b"><img src="/images/dominic-lake.jpg" alt="Dominic Siwiec at the lake" width="1500" height="643" loading="lazy" decoding="async" style="object-position:38% 50%" /><span class="photo-slot-label">Photo<small></small></span></div>
     </div>
   </div>
+  <div class="livery livery--hero" aria-hidden="true"></div>
 </section>
 
-<!-- ==================== STRIP ==================== -->
-<div class="strip">
-  <div class="wrap strip-inner">
-    <span>Construction Engineering</span>
-    <span>Game Development</span>
-    <span>Engine Builds</span>
-    <span>Content Creation</span>
-    <span>Competitive Swimming</span>
-  </div>
-</div>
-
-<!-- ==================== ABOUT ==================== -->
 <section class="section" id="about">
-  <div class="wrap">
-    <div class="section-label">About</div>
-    <h2 class="section-title">Who I am</h2>
-
-    <div class="about-grid reveal">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <h2 class="section-title">Who I am</h2>
       <div class="prose">
-        <p>
-          I'm a Construction Engineering student at Iowa State University with an emphasis on the
-          mechanical side of the field. My goal is to get good at optimizing infrastructure: figuring
-          out where a process is wasting time or money, then rebuilding it so it doesn't.
-        </p>
-        <p>
-          That interest didn't start in a classroom. It started with a family iMac, a YouTube channel,
-          and a stubborn habit of not accepting that something couldn't be done. I installed Windows on
-          a Mac because the software I wanted wouldn't run otherwise. I taught myself Blender in a
-          weekend because someone mentioned there was money in it. I bought a car with a blown head
-          gasket because I wanted to know if I could fix it.
-        </p>
-        <p>
-          A few of those turned into real businesses: reselling repaired consoles and custom-built
-          gaming PCs, then a Roblox development group that has pulled in millions of visits across its
-          titles. Along the way I've run <strong>teams of developers and editors</strong>, which is
-          where the project-management side of my brain got its first real workout.
-        </p>
-        <p>
-          These days I'm applying that same approach to construction: quantity takeoffs, scheduling,
-          cost tracking, and finding better ways to move data between systems without losing half of it.
-          The subject changed. The method didn't.
-        </p>
+        <p>I'm a Construction Engineering student at Iowa State University with an emphasis on the mechanical side of the field. My goal is to get good at optimizing infrastructure: figuring out where a process is wasting time or money, then rebuilding it so it doesn't.</p>
+        <p>That interest didn't start in a classroom. It started with a family iMac, a YouTube channel, and a stubborn habit of not accepting that something couldn't be done. I installed Windows on a Mac because the software I wanted wouldn't run otherwise. I taught myself Blender in a weekend because someone mentioned there was money in it. I bought a car with a blown head gasket because I wanted to know if I could fix it.</p>
+        <p>A few of those turned into real businesses: reselling repaired consoles and custom-built gaming PCs, then a Roblox development group that has pulled in millions of visits across its titles. Along the way I've run <strong>teams of developers and editors</strong>, which is where the project-management side of my brain got its first real workout.</p>
+        <p>These days I'm applying that same approach to construction: quantity takeoffs, scheduling, cost tracking, and finding better ways to move data between systems without losing half of it. The subject changed. The method didn't.</p>
       </div>
-
-      <aside>
-        <div class="fact-card">
-          <h4>Quick facts</h4>
-          <ul class="fact-list">
-            <li><span class="k">Studying</span><span class="v">Construction Engineering</span></li>
-            <li><span class="k">School</span><span class="v">Iowa State University</span></li>
-            <li><span class="k">Graduating</span><span class="v">December 2027</span></li>
-            <li><span class="k">Currently</span><span class="v">Programming my next Roblox game</span></li>
-            <li><span class="k">Based in</span><span class="v">Lake in the Hills, IL</span></li>
-            <li><span class="k">Languages</span><span class="v">English &middot; Polish</span></li>
-          </ul>
-        </div>
-        <div class="tag-row">
-          <span class="tag">Bluebeam Revu</span>
-          <span class="tag">Primavera P6</span>
-          <span class="tag">Excel</span>
-          <span class="tag">Quantity Takeoffs</span>
-          <span class="tag">Lua</span>
-          <span class="tag">Blender</span>
-          <span class="tag">Photoshop</span>
-          <span class="tag">Team Leadership</span>
-        </div>
-      </aside>
     </div>
-
-    <div class="reveal" style="margin-top:36px;">
-      <div class="photo-slot photo-slot--wide">
-          <img src="/images/dominic-ledge.jpg" alt="Dominic Siwiec looking out over the valley" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>Wide banner</small></span>
-        </div>
-    </div>
+    <aside class="about-side reveal">
+      <div class="plate">
+        <h3 class="plate-title">Spec sheet</h3>
+        <dl class="plate-grid"><div class="plate-cell"><dt>Studying</dt><dd>Construction Engineering</dd></div><div class="plate-cell"><dt>School</dt><dd>Iowa State University</dd></div><div class="plate-cell"><dt>Graduating</dt><dd>December 2027</dd></div><div class="plate-cell"><dt>Currently</dt><dd>Programming my next Roblox game</dd></div><div class="plate-cell"><dt>Based in</dt><dd>Lake in the Hills, IL</dd></div><div class="plate-cell"><dt>Languages</dt><dd>English and Polish</dd></div></dl>
+      </div>
+      <h3 class="mini-title">Tools I use</h3>
+      <ul class="chip-row"><li>Bluebeam Revu</li><li>Primavera P6</li><li>Excel</li><li>Quantity takeoffs</li><li>Lua</li><li>Blender</li><li>Photoshop</li><li>Team leadership</li></ul>
+    </aside>
+  </div>
+  <div class="wrap reveal">
+    <div class="photo-slot photo-slot--wide"><img src="/images/dominic-ledge.jpg" alt="Dominic Siwiec looking out over the valley" width="1170" height="502" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
   </div>
 </section>
 
-<!-- ==================== EXPERIENCE ==================== -->
 <section class="section section--alt" id="experience">
   <div class="wrap">
-    <div class="section-label">Experience</div>
     <h2 class="section-title">Where I've worked</h2>
-    <p class="section-intro">
-      From lifeguard stands to preconstruction planning, a few years of learning how teams,
-      schedules, and customers actually work.
-    </p>
-
-    <div class="timeline reveal">
-
-      <article class="job is-current">
-        <div class="job-head">
-          <span class="job-title">Field Engineer / Project Management Intern</span>
-          <span class="job-co">McGough</span>
-          <span class="job-when">Jan 2026 to Aug 2026</span>
-        </div>
-        <div class="job-where">Des Moines, Iowa &middot; On-site &middot; Full-time</div>
-        <ul>
-          <li>Supported preconstruction planning on large-scale projects through detailed quantity takeoffs, drawing analysis, and estimating support.</li>
-          <li>Documented daily activities, reviewed drawings and RFIs, and helped resolve field issues to keep timelines on track.</li>
-          <li>Built and maintained takeoff and cost-tracking spreadsheets in Bluebeam Revu and Excel that fed budgeting and procurement decisions.</li>
-          <li>Researched and developed a streamlined process for moving schedule data between scheduling platforms and Primavera P6 without losing schedule integrity.</li>
-          <li>Pursued FAA Part 107 Remote Pilot certification to support drone-assisted site documentation and progress tracking.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-head">
-          <span class="job-title">Merchandise Associate</span>
-          <span class="job-co">Hy-Vee, Inc.</span>
-          <span class="job-when">Aug 2024 to May 2025</span>
-        </div>
-        <ul>
-          <li>Handled product flow and shelf assembly efficiently during high-volume shifts.</li>
-          <li>Worked as part of a floor team focused on customer service.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-head">
-          <span class="job-title">Aquatics Supervisor</span>
-          <span class="job-co">Life Time Fitness</span>
-          <span class="job-when">Apr 2022 to Mar 2024</span>
-        </div>
-        <ul>
-          <li>Managed the facility's aquatics department and its staffing.</li>
-          <li>Handled member service with an emphasis on retention.</li>
-          <li>Responded to and rescued swimmers in distress.</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <div class="job-head">
-          <span class="job-title">Salesperson</span>
-          <span class="job-co">Revived Exteriors Inc</span>
-          <span class="job-when">Feb 2020 to May 2020</span>
-        </div>
-        <ul>
-          <li>Learned the full service portfolio alongside a sales team.</li>
-          <li>Delivered personalized consultations and handled customer concerns directly.</li>
-        </ul>
-      </article>
-
+    <p class="section-intro">From lifeguard stands to preconstruction planning, a few years of learning how teams, schedules, and customers actually work.</p>
+    <div class="timeline">
+      <article class="job reveal"><p class="job-when"><span>Jan 2026</span><span>Aug 2026</span></p><div class="job-body"><h3 class="job-title">Field Engineer / Project Management Intern</h3><p class="job-co">McGough</p><p class="job-where">Des Moines, Iowa. On-site, full-time co-op.</p><ul><li>Supported preconstruction planning on large-scale projects through detailed quantity takeoffs, drawing analysis, and estimating support.</li><li>Documented daily activities, reviewed drawings and RFIs, and helped resolve field issues to keep timelines on track.</li><li>Built and maintained takeoff and cost-tracking spreadsheets in Bluebeam Revu and Excel that fed budgeting and procurement decisions.</li><li>Researched and developed a streamlined process for moving schedule data between scheduling platforms and Primavera P6 without losing schedule integrity.</li><li>Pursued FAA Part 107 Remote Pilot certification to support drone-assisted site documentation and progress tracking.</li></ul></div></article><article class="job reveal"><p class="job-when"><span>Aug 2024</span><span>May 2025</span></p><div class="job-body"><h3 class="job-title">Merchandise Associate</h3><p class="job-co">Hy-Vee, Inc.</p><ul><li>Handled product flow and shelf assembly efficiently during high-volume shifts.</li><li>Worked as part of a floor team focused on customer service.</li></ul></div></article><article class="job reveal"><p class="job-when"><span>Apr 2022</span><span>Mar 2024</span></p><div class="job-body"><h3 class="job-title">Aquatics Supervisor</h3><p class="job-co">Life Time Fitness</p><ul><li>Managed the facility's aquatics department and its staffing.</li><li>Handled member service with an emphasis on retention.</li><li>Responded to and rescued swimmers in distress.</li></ul></div></article><article class="job reveal"><p class="job-when"><span>Feb 2020</span><span>May 2020</span></p><div class="job-body"><h3 class="job-title">Salesperson</h3><p class="job-co">Revived Exteriors Inc</p><ul><li>Learned the full service portfolio alongside a sales team.</li><li>Delivered personalized consultations and handled customer concerns directly.</li></ul></div></article>
     </div>
-
+    <h3 class="mini-title mini-title--spaced">Education</h3>
     <div class="edu-grid reveal">
       <div class="edu-card">
         <h4>Iowa State University</h4>
-        <div class="edu-meta">B.S. Construction Engineering &middot; Aug 2023 to Dec 2027</div>
+        <p class="edu-meta">B.S. Construction Engineering, Aug 2023 to Dec 2027</p>
         <p>Mechanical emphasis. Active in AGC, MCA, Baja SAE, Swim Club, and Polish Club.</p>
       </div>
       <div class="edu-card">
         <h4>Huntley High School</h4>
-        <div class="edu-meta">High School Diploma &middot; Aug 2019 to May 2023</div>
+        <p class="edu-meta">High School Diploma, Aug 2019 to May 2023</p>
         <p>3.9 GPA. Varsity swimming, ski and snowboard, and the Seal of Biliteracy in Polish.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== PROJECTS ==================== -->
 <section class="section" id="projects">
   <div class="wrap">
-    <div class="section-label">Projects</div>
+    <p class="eyebrow">The garage</p>
     <h2 class="section-title">Things I've built on my own</h2>
-    <p class="section-intro">
-      None of these were assignments. Each one started because I wanted to know whether I could pull it off.
-    </p>
-
-    <div class="project-grid">
-
-      <!-- FEATURED: YouTube -->
-      <article class="card card--feature card--yt reveal" id="youtube">
-        <div class="card-inner">
-          <div class="video-frame" style="border-radius:0;border:none;border-right:1px solid var(--border);">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/VduUnjwUw2Q"
-              title="Latest stream from GingisDojo"
+    <p class="section-intro">None of these were assignments. Each one started because I wanted to know whether I could pull it off.</p>
+    <div class="bays">
+      <article class="card card--yt bay-full reveal" id="youtube">
+        <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/VduUnjwUw2Q" title="Latest stream from GingisDojo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen loading="lazy"></iframe>
-          </div>
-          <div class="card-body">
-            <div class="card-kicker"><svg class="kicker-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10.5 9.2v5.6l4.6-2.8z"/></svg>Latest stream &middot; @GingisDojo</div>
-            <h3>The YouTube channel</h3>
-            <p>
-              I started recording videos on an iPad in fourth grade. That moved to the family iMac,
-              which is where things got interesting: macOS wouldn't run the software I needed, so I
-              installed Windows on it myself just to unlock the tools.
-            </p>
-
-            <!-- live counter -->
-            <div class="subs" id="subs" data-channel="UCGhteD-r5Mp2gzKsNmQc1nA" data-goal="100000">
-              <div class="subs-live"><span class="dot"></span>Live subscriber count</div>
-              <div class="subs-count" data-subs-count>18,400</div>
-              <div class="subs-word">Subscribers</div>
-              <div class="subs-meta">
-                <span><b data-subs-views>2,822,000</b> total views</span>
-                <span><b data-subs-videos>92</b> videos</span>
-              </div>
-              <div class="subs-goal">
-                <div class="subs-bar"><span data-subs-bar></span></div>
-                <div class="subs-goal-label">
-                  <span>Toward the 100K plaque</span>
-                  <span data-subs-pct>18% there</span>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              Almost everything I know about tech traces back to that channel. Which microphone actually
-              sounds better, how to light a shot, what components matter and why, how to build a
-              thumbnail in Photoshop that people click. I also spent a lot of time reverse-engineering
-              the algorithm itself, running analytics tools, A/B testing thumbnails and titles against
-              each other, and reading retention curves to work out what the platform was actually
-              rewarding instead of guessing at it.
-            </p>
-            <p>
-              My niche targets a younger, fast-moving audience, which meant long editing sessions to
-              keep the pacing tight. That's where I learned real discipline. The CPM eventually made it
-              hard to justify as a primary income source, so I stepped back, but I still post for the
-              community I built, and hitting 100K subscribers is a goal I haven't let go of.
-            </p>
-            <div class="card-tags">
-              <span class="tag">Video editing</span>
-              <span class="tag">Photoshop</span>
-              <span class="tag">Analytics</span>
-              <span class="tag">Audience growth</span>
-            </div>
-            <a class="card-link" href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">Visit the channel <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         </div>
-      </article>
-
-      <!-- Roblox -->
-      <article class="card card--roblox reveal" id="roblox">
-        <div class="photo-slot photo-slot--card">
-          <img src="/images/roblox-cover.jpg" alt="Roblox game development" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>Roblox cover</small></span>
+        <div class="card-more prose">
+            <p>Almost everything I know about tech traces back to that channel. Which microphone actually sounds better, how to light a shot, what components matter and why, how to build a thumbnail in Photoshop that people click. I also spent a lot of time reverse-engineering the algorithm itself, running analytics tools, A/B testing thumbnails and titles against each other, and reading retention curves to work out what the platform was actually rewarding instead of guessing at it.</p>
+            <p>My niche targets a younger, fast-moving audience, which meant long editing sessions to keep the pacing tight. That's where I learned real discipline. The CPM eventually made it hard to justify as a primary income source, so I stepped back, but I still post for the community I built, and hitting 100K subscribers is a goal I haven't let go of.</p>
         </div>
         <div class="card-body">
-          <div class="card-kicker"><svg class="kicker-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.6" y="4.6" width="14.8" height="14.8" rx="1.6" transform="rotate(-12 12 12)"/><rect x="9.4" y="9.4" width="5.2" height="5.2" rx="0.7" transform="rotate(-12 12 12)"/></svg>Game development</div>
+          <p class="card-kicker"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg><span>Latest stream, @GingisDojo</span></p>
+          <h3>The YouTube channel</h3>
+          <p>I started recording videos on an iPad in fourth grade. That moved to the family iMac, which is where things got interesting: macOS wouldn't run the software I needed, so I installed Windows on it myself just to unlock the tools.</p>
+          <div class="subs" id="subs" data-channel="UCGhteD-r5Mp2gzKsNmQc1nA" data-goal="100000" aria-live="polite">
+            <p class="subs-live"><span class="dot" aria-hidden="true"></span>Subscribers <span class="subs-state" data-subs-state>(last count)</span></p>
+            <p class="subs-count" data-subs-count>18,400</p>
+            <div class="subs-meta">
+              <span><b data-subs-views>2,822,000</b> total views</span>
+              <span><b data-subs-videos>92</b> videos</span>
+            </div>
+            <div class="subs-goal">
+              <div class="subs-bar"><span data-subs-bar></span></div>
+              <p class="subs-goal-label"><span>Toward the 100K plaque</span><span data-subs-pct>18% there</span></p>
+            </div>
+          </div>
+          <ul class="card-tags"><li>Video editing</li><li>Photoshop</li><li>Analytics</li><li>Audience growth</li></ul>
+          <a class="card-link" href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">Visit the channel <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+        </div>
+      </article>
+      <article class="card card--roblox bay-5 reveal" id="roblox">
+        <div class="photo-slot photo-slot--card roblox-panel">
+          <img src="/images/roblox-cover.jpg" alt="Roblox game development" width="1200" height="750" loading="lazy" decoding="async" />
+          <span class="photo-slot-label"><span class="big-num">~6M</span><small>Robux earned from UGC items</small></span>
+        </div>
+        <div class="card-body">
+          <p class="card-kicker"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M176,112H152a8,8,0,0,1,0-16h24a8,8,0,0,1,0,16ZM104,96H96V88a8,8,0,0,0-16,0v8H72a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16ZM241.48,200.65a36,36,0,0,1-54.94,4.81c-.12-.12-.24-.24-.35-.37L146.48,160h-37L69.81,205.09l-.35.37A36.08,36.08,0,0,1,44,216,36,36,0,0,1,8.56,173.75a.68.68,0,0,1,0-.14L24.93,89.52A59.88,59.88,0,0,1,83.89,40H172a60.08,60.08,0,0,1,59,49.25c0,.06,0,.12,0,.18l16.37,84.17a.68.68,0,0,1,0,.14A35.74,35.74,0,0,1,241.48,200.65ZM172,144a44,44,0,0,0,0-88H83.89A43.9,43.9,0,0,0,40.68,92.37l0,.13L24.3,176.59A20,20,0,0,0,58,194.3l41.92-47.59a8,8,0,0,1,6-2.71Zm59.7,32.59-8.74-45A60,60,0,0,1,172,160h-4.2L198,194.31a20.09,20.09,0,0,0,17.46,5.39,20,20,0,0,0,16.23-23.11Z"/></svg><span>Game development</span></p>
           <h3>Roblox development and UGC</h3>
-          <p>
-            While I was streaming, someone floated the idea of making UGC items to sell in the Roblox
-            marketplace under the niche my channel already covered. I gave myself a day to figure it
-            out, taught myself Blender from scratch, modeled a handful of items, and published them
-            under my group. Those items went on to earn roughly <strong>6 million Robux</strong>.
-          </p>
-          <p>
-            That revenue became the foundation for publishing full games. The titles I've put out have
-            collectively pulled in <strong>millions of visits</strong>.
-          </p>
-          <div class="stat-row">
-            <div class="stat"><div class="stat-num">~6M</div><div class="stat-lbl">Robux earned</div></div>
-            <div class="stat"><div class="stat-num">Millions</div><div class="stat-lbl">Game visits</div></div>
-          </div>
-          <div class="card-tags">
-            <span class="tag">Lua</span>
-            <span class="tag">Blender</span>
-            <span class="tag">Roblox Studio</span>
-            <span class="tag">Team management</span>
-          </div>
-          <a class="card-link" href="/roblox/">See the games and progress <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p>While I was streaming, someone floated the idea of making UGC items to sell in the Roblox marketplace under the niche my channel already covered. I gave myself a day to figure it out, taught myself Blender from scratch, modeled a handful of items, and published them under my group. Those items went on to earn roughly <strong>6 million Robux</strong>.</p>
+          <p>That revenue became the foundation for publishing full games. The titles I've put out have collectively pulled in <strong>millions of visits</strong>.</p>
+          <ul class="card-tags"><li>Lua</li><li>Blender</li><li>Roblox Studio</li><li>Team management</li></ul>
+          <a class="card-link" href="/roblox/">See the games <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </article>
-
-      <!-- Flipping -->
-      <article class="card card--pc reveal" id="hardware">
-        <div class="photo-slot photo-slot--card">
-          <img src="/images/pc-builds.jpg" alt="Custom gaming PC builds" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>PC and console builds</small></span>
-        </div>
+      <article class="card card--pc bay-7 reveal" id="hardware">
+        <div class="photo-slot photo-slot--card"><img src="/images/pc-builds.jpg" alt="Custom gaming PC builds" width="1100" height="688" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
         <div class="card-body">
-          <div class="card-kicker"><svg class="kicker-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.6"/><path d="M10 3.5v3M14 3.5v3M10 17.5v3M14 17.5v3M3.5 10h3M3.5 14h3M17.5 10h3M17.5 14h3"/></svg>Hardware and resale</div>
+          <p class="card-kicker"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M152,96H104a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V104A8,8,0,0,0,152,96Zm-8,48H112V112h32Zm88,0H216V112h16a8,8,0,0,0,0-16H216V56a16,16,0,0,0-16-16H160V24a8,8,0,0,0-16,0V40H112V24a8,8,0,0,0-16,0V40H56A16,16,0,0,0,40,56V96H24a8,8,0,0,0,0,16H40v32H24a8,8,0,0,0,0,16H40v40a16,16,0,0,0,16,16H96v16a8,8,0,0,0,16,0V216h32v16a8,8,0,0,0,16,0V216h40a16,16,0,0,0,16-16V160h16a8,8,0,0,0,0-16Zm-32,56H56V56H200v95.87s0,.09,0,.13,0,.09,0,.13V200Z"/></svg><span>Hardware and resale</span></p>
           <h3>Console repair and gaming PC builds</h3>
-          <p>
-            This is the one that started everything else. Right after I got my job at Life Time, the
-            PS5 and Xbox Series X launched, and both shipped with the same weak point: the HDMI port
-            was poorly seated and would fail. So I learned to desolder and reflow the port back onto
-            the motherboard.
-          </p>
-          <p>
-            That skill let me buy broken, nearly-new consoles for very little, repair them, and resell
-            them at a real margin alongside my day job. Once I had capital, I moved up to building
-            gaming PCs, sourcing discounted parts, keeping a stock of cables and cheap components,
-            and assembling machines that cost less to build than they sold for.
-          </p>
-          <p>
-            After a few months of that, I had enough saved to justify buying a project car.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Soldering</span>
-            <span class="tag">Hardware repair</span>
-            <span class="tag">PC building</span>
-            <span class="tag">Sourcing</span>
+          <p>This is the one that started everything else. Right after I got my job at Life Time, the PS5 and Xbox Series X launched, and both shipped with the same weak point: the HDMI port was poorly seated and would fail. So I learned to desolder and reflow the port back onto the motherboard.</p>
+          <p>That skill let me buy broken, nearly-new consoles for very little, repair them, and resell them at a real margin alongside my day job. Once I had capital, I moved up to building gaming PCs, sourcing discounted parts, keeping a stock of cables and cheap components, and assembling machines that cost less to build than they sold for.</p>
+          <p>After a few months of that, I had enough saved to justify buying a project car.</p>
+          <div class="photo-row photo-row--mini">
+            <div class="photo-slot"><img src="/images/pc-build-1.jpg" alt="White custom gaming PC build" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+            <div class="photo-slot"><img src="/images/pc-build-2.jpg" alt="Red custom gaming PC build" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+            <div class="photo-slot"><img src="/images/pc-build-3.jpg" alt="Gaming PC build in progress" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
           </div>
-          <div class="photo-row photo-row--tall photo-row--mini">
-            <div class="photo-slot">
-          <img src="/images/pc-build-1.jpg" alt="Custom gaming PC build" loading="lazy" />
-          <span class="photo-slot-label">Build 1<small>White build</small></span>
-        </div>
-            <div class="photo-slot">
-          <img src="/images/pc-build-2.jpg" alt="Custom gaming PC build" loading="lazy" />
-          <span class="photo-slot-label">Build 2<small>Red build</small></span>
-        </div>
-            <div class="photo-slot">
-          <img src="/images/pc-build-3.jpg" alt="Custom gaming PC build" loading="lazy" />
-          <span class="photo-slot-label">Build 3<small>In progress</small></span>
-        </div>
-          </div>
-          <a class="card-link" href="/wrx-2005/">This funded the 2005 WRX <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <ul class="card-tags"><li>Soldering</li><li>Hardware repair</li><li>PC building</li><li>Sourcing</li></ul>
+          <a class="card-link" href="/wrx-2005/">This funded the 2005 WRX <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </article>
-
-      <!-- 2005 WRX -->
-      <article class="card card--wrx05 reveal" id="wrx-2005">
-        <div class="photo-slot photo-slot--card">
-          <img src="/images/wrx-2005-cover.jpg" alt="2005 Subaru Impreza WRX rebuild" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>2005 WRX cover</small></span>
-        </div>
+      <article class="card card--wrx05 bay-7 reveal" id="wrx-2005">
+        <div class="photo-slot photo-slot--card"><img src="/images/wrx-2005-cover.jpg" alt="2005 Subaru Impreza WRX in rally blue" width="768" height="480" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
         <div class="card-body">
-          <div class="card-kicker"><svg class="kicker-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 16.4v-3l1.9-4.2A2 2 0 017 8h10a2 2 0 011.9 1.2l1.9 4.2v3"/><path d="M3.2 13.4h17.6"/><circle cx="7.3" cy="16.9" r="1.6"/><circle cx="16.7" cy="16.9" r="1.6"/></svg>Full rebuild</div>
+          <p class="card-kicker"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"/></svg><span>Full rebuild</span></p>
           <h3>2005 Subaru Impreza WRX</h3>
-          <p>
-            Bought at 2 AM in Chicago with a known head gasket leak, then stripped to a shell. Engine
-            swap, rust repair and welding, full interior teardown, a bolt-in roll cage, body filler and
-            block sanding, and a respray in rally blue.
-          </p>
-          <p>
-            It's the project that taught me the most, mostly because almost nothing about it went
-            smoothly.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Engine swap</span>
-            <span class="tag">Welding</span>
-            <span class="tag">Bodywork</span>
-            <span class="tag">Paint</span>
-          </div>
-          <a class="card-link" href="/wrx-2005/">Read the full build <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p>Bought at 2 AM in Chicago with a known head gasket leak, then stripped to a shell. Engine swap, rust repair and welding, full interior teardown, a bolt-in roll cage, body filler and block sanding, and a respray in rally blue.</p>
+          <p>It's the project that taught me the most, mostly because almost nothing about it went smoothly.</p>
+          <ul class="card-tags"><li>Engine swap</li><li>Welding</li><li>Bodywork</li><li>Paint</li></ul>
+          <a class="card-link" href="/wrx-2005/">Read the full build <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </article>
-
-      <!-- 2019 WRX -->
-      <article class="card card--wrx19 reveal" id="wrx-2019">
-        <div class="photo-slot photo-slot--card">
-          <img src="/images/wrx-2019-cover.jpg" alt="2019 Subaru WRX interior rebuild" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>2019 WRX cover</small></span>
-        </div>
+      <article class="card card--wrx19 bay-5 reveal" id="wrx-2019">
+        <div class="photo-slot photo-slot--card"><img src="/images/wrx-2019-cover.jpg" alt="2019 Subaru WRX in black" width="640" height="400" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
         <div class="card-body">
-          <div class="card-kicker"><svg class="kicker-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 16.4v-3l1.9-4.2A2 2 0 017 8h10a2 2 0 011.9 1.2l1.9 4.2v3"/><path d="M3.2 13.4h17.6"/><circle cx="7.3" cy="16.9" r="1.6"/><circle cx="16.7" cy="16.9" r="1.6"/></svg>Interior rebuild</div>
+          <p class="card-kicker"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M128,152a12,12,0,1,1,12-12A12,12,0,0,1,128,152Zm104-24A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128ZM40,128v.33a135.93,135.93,0,0,1,176,0V128a88,88,0,0,0-176,0Zm67.5,85.58L90.45,168H49.63A88.35,88.35,0,0,0,107.5,213.58ZM128,216c.83,0,1.66,0,2.49,0l20.07-53.57a16.07,16.07,0,0,1,15-10.39h47.12c.38-1.31.72-2.64,1-4a120,120,0,0,0-171.4,0c.31,1.34.65,2.67,1,4H90.45a16.08,16.08,0,0,1,15,10.4l20,53.56C126.31,216,127.15,216,128,216Zm78.37-48H165.55l-17.09,45.59A88.34,88.34,0,0,0,206.37,168Z"/></svg><span>Interior rebuild</span></p>
           <h3>2019 Subaru WRX</h3>
-          <p>
-            Bought at auction in Colorado completely stripped of its interior, sight unseen. I flew out,
-            learned to drive manual in a school parking lot that afternoon, and drove it home to Illinois.
-          </p>
-          <p>
-            Then rebuilt the interior piece by piece from junkyard parts, sorted out the wiring, and
-            brought it back to stock. It's my daily now, and the car I plan to build into a rally car.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Interior restoration</span>
-            <span class="tag">Wiring</span>
-            <span class="tag">Maintenance</span>
-            <span class="tag">Parts sourcing</span>
-          </div>
-          <a class="card-link" href="/wrx-2019/">Read the full build <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p>Bought at auction in Colorado completely stripped of its interior, sight unseen. I flew out, learned to drive manual in a school parking lot that afternoon, and drove it home to Illinois.</p>
+          <p>Then rebuilt the interior piece by piece from junkyard parts, sorted out the wiring, and brought it back to stock. It's my daily now, on black TE37s, and the car I plan to build into a rally car.</p>
+          <ul class="card-tags"><li>Interior restoration</li><li>Wiring</li><li>Maintenance</li><li>Parts sourcing</li></ul>
+          <a class="card-link" href="/wrx-2019/">Read the full build <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ==================== SWIMMING ==================== -->
 <section class="section section--alt" id="swimming">
   <div class="wrap">
-    <div class="section-label">Swimming</div>
-    <h2 class="section-title">Twelve years in the water</h2>
-    <p class="section-intro">The thing that shaped how I handle everything else.</p>
-
-    <div class="swim-grid reveal">
-      <div class="prose">
-        <p>
-          I started swimming at eleven, which is late by competitive standards. Before that it was
-          soccer, mostly because my dad loved it, and neither my brother nor I ever really did. What
-          my parents cared about was that we played something that would challenge us and build
-          discipline, so they landed on competitive swimming.
-        </p>
-        <p>
-          I started at the <strong>Woodstock Dolphins</strong>, which ran lessons for beginners. Working
-          up through the ranks into the competitive practices was a completely different animal. Anyone
-          who's done it knows what I mean: swim practice teaches you to focus because it doesn't give
-          you any other option.
-        </p>
-        <p>
-          That carried through every team I swam for after: <strong>SAGE YMCA</strong>, the
-          <strong>YMCA in DeKalb</strong>, <strong>Reach Aquatics</strong>, and my high school team.
-          The 6 AM practices are what shaped me most. Summer practices outside in the cold were brutal
-          in their own way. Swimming changed me physically, but the part people miss is the mental
-          side, doing the same set over and over, for hours, in conditions nobody would choose.
-        </p>
-        <p>
-          It paid off. At twelve I qualified for the state championships in the 200 fly, and more
-          followed from there. I closed out my career by <strong>breaking my high school's 100 fly
-          record</strong> and going to state with my relay team. After that I decided the era was over
-          and hung up the cap.
-        </p>
-        <p>
-          I still swim occasionally with the club team at Iowa State, though most of my training now is
-          calisthenics and just staying active. I don't regret a single part of it.
-        </p>
-
-        <a href="https://www.swimcloud.com/swimmer/1989784/" class="btn btn-ghost" target="_blank" rel="noopener" style="margin-top:8px;">
-          View my times on SwimCloud <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-        </a>
+    <div class="swim-banner reveal">
+      <div class="photo-slot photo-slot--banner"><img src="/images/swim-wide.jpg" alt="Swimming butterfly in competition" width="1494" height="640" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+      <div class="swim-banner-copy">
+        <h2 class="section-title">Twelve years in the water</h2>
+        <p>The thing that shaped how I handle everything else.</p>
       </div>
-
-      <aside>
-        <div class="record-card">
-          <span class="record-tag">School record</span>
-          <h4>100 Fly, Huntley High School</h4>
-          <p>Broke the school record in my final season and went to the state championships with my relay team.</p>
-        </div>
-        <div class="record-card">
-          <span class="record-tag">Age 12</span>
-          <h4>200 Fly, state qualifier</h4>
-          <p>First state championship qualification, about a year into competitive swimming.</p>
-        </div>
-
-        <div class="fact-card" style="margin-top:24px;">
-          <h4>Teams</h4>
-          <ul class="team-list">
-            <li>Woodstock Dolphins</li>
-            <li>SAGE YMCA of Metro Chicago</li>
-            <li>YMCA, DeKalb, Illinois</li>
-            <li>Reach Aquatics</li>
-            <li>Huntley High School</li>
-            <li>Iowa State Swim Club</li>
-          </ul>
-        </div>
-      </aside>
     </div>
 
-    <div class="reveal" style="margin-top:44px;">
-      <div class="photo-slot photo-slot--wide">
-          <img src="/images/swim-wide.jpg" alt="Swimming butterfly in competition" loading="lazy" />
-          <span class="photo-slot-label">Photo<small>Wide banner</small></span>
-        </div>
+    <div class="stat-strip reveal">
+      <div class="stat-big"><p class="stat-big-num">12</p><p class="stat-big-lbl">Years of competitive swimming</p></div>
+      <div class="stat-big"><p class="stat-big-num">100 fly</p><p class="stat-big-lbl">School record, Huntley High School</p></div>
+      <div class="stat-big"><p class="stat-big-num">Age 12</p><p class="stat-big-lbl">First state qualifier, 200 fly</p></div>
+    </div>
+
+    <div class="swim-body reveal">
+      <div class="prose">
+        <p>I started swimming at eleven, which is late by competitive standards. Before that it was soccer, mostly because my dad loved it, and neither my brother nor I ever really did. What my parents cared about was that we played something that would challenge us and build discipline, so they landed on competitive swimming.</p>
+        <p>I started at the <strong>Woodstock Dolphins</strong>, which ran lessons for beginners. Working up through the ranks into the competitive practices was a completely different animal. Anyone who's done it knows what I mean: swim practice teaches you to focus because it doesn't give you any other option.</p>
+        <p>That carried through every team I swam for after: <strong>SAGE YMCA</strong>, the <strong>YMCA in DeKalb</strong>, <strong>Reach Aquatics</strong>, and my high school team. The 6 AM practices are what shaped me most. Summer practices outside in the cold were brutal in their own way. Swimming changed me physically, but the part people miss is the mental side, doing the same set over and over, for hours, in conditions nobody would choose.</p>
+        <p>It paid off. At twelve I qualified for the state championships in the 200 fly, and more followed from there. I closed out my career by <strong>breaking my high school's 100 fly record</strong> and going to state with my relay team. After that I decided the era was over and hung up the cap.</p>
+        <p>I still swim occasionally with the club team at Iowa State, though most of my training now is calisthenics and just staying active. I don't regret a single part of it.</p>
+        <a href="https://www.swimcloud.com/swimmer/1989784/" class="btn btn-ghost" target="_blank" rel="noopener">View my times on SwimCloud <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+      </div>
+      <div class="swim-teams">
+        <h3 class="mini-title">Teams</h3>
+        <ol class="team-list">
+          <li>Woodstock Dolphins</li><li>SAGE YMCA of Metro Chicago</li><li>YMCA, DeKalb, Illinois</li>
+          <li>Reach Aquatics</li><li>Huntley High School</li><li>Iowa State Swim Club</li>
+        </ol>
+      </div>
     </div>
 
     <div class="photo-row photo-row--tall reveal">
-      <div class="photo-slot">
-          <img src="/images/swim-1.jpg" alt="Breaking the school 100 fly record" loading="lazy" />
-          <span class="photo-slot-label">Swim photo 1<small>Coming soon</small></span>
-        </div>
-      <div class="photo-slot">
-          <img src="/images/swim-2.jpg" alt="State relay team" loading="lazy" />
-          <span class="photo-slot-label">Swim photo 2<small>Coming soon</small></span>
-        </div>
-      <div class="photo-slot">
-          <img src="/images/swim-3.jpg" alt="On the blocks" loading="lazy" />
-          <span class="photo-slot-label">Swim photo 3<small>Coming soon</small></span>
-        </div>
+      <div class="photo-slot"><img src="/images/swim-1.jpg" alt="Breaking the school 100 fly record" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+      <div class="photo-slot"><img src="/images/swim-2.jpg" alt="State relay team" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+      <div class="photo-slot"><img src="/images/swim-3.jpg" alt="On the blocks" width="760" height="950" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== ENDURANCE ==================== -->
 <section class="section" id="endurance">
   <div class="wrap">
-    <div class="section-label">Endurance</div>
     <h2 class="section-title">The next finish line</h2>
     <p class="section-intro">I hung up the cap. I didn't stop training.</p>
-
-    <div class="swim-grid reveal">
-      <div class="prose">
-        <p>
-          Twelve years of competitive swimming ended with a school record and a state meet, and then
-          nothing. No season to train for, no clock to answer to. It took about a year to admit I
-          missed having something on the calendar that scared me a little.
-        </p>
-        <p>
-          So the plan is an <strong>Ironman</strong>. Not someday in the abstract. A real one, with an
-          entry fee and a start line.
-        </p>
-        <p>
-          I trained for it last year and got a long way into a program before reality caught up. What
-          stopped me was never the training. It was the cost. Entry fees, a bike worth riding 112
-          miles, a wetsuit, travel, lodging. Endurance racing is expensive in a way nobody mentions
-          when you first get the idea in your head.
-        </p>
-        <p>
-          So I'm approaching it the same way I'd approach any build. Start with the half, the
-          <strong>70.3</strong>, while I'm still in school and the logistics are manageable. Then move
-          up to the full distance after graduation, once I have the income and the schedule to train
-          for it properly instead of squeezing it around everything else.
-        </p>
-        <p>
-          Right now I'm in the unglamorous part: pricing the whole thing out. What an entry actually
-          runs, what equipment I genuinely need versus what the sport would like me to buy, what a
-          real training block costs in hours, and how far ahead I need to start putting money aside.
-          I'd rather solve that on a spreadsheet than let it end the attempt a second time.
-        </p>
-        <p>
-          It's on the bucket list for a simple reason. I want to be able to say I did it once.
-        </p>
+    <div class="races">
+      <div class="race reveal"><p class="race-tag">First target</p><h3 class="race-name">Half Ironman</h3><p class="race-num">70.3</p><ul class="race-legs"><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M176,104a32,32,0,1,0-32-32A32,32,0,0,0,176,104Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,176,56Zm46.16,129.24a8,8,0,0,1-1,11.26c-17.36,14.39-32.86,19.5-47,19.5-18.58,0-34.82-8.82-49.93-17-25.35-13.76-47.24-25.65-79.07.74a8,8,0,1,1-10.22-12.31c40.17-33.29,70.32-16.93,96.93-2.49,25.35,13.77,47.24,25.65,79.07-.74A8,8,0,0,1,222.16,185.24ZM34.89,147.42a8,8,0,1,0,10.22,12.31c31.83-26.38,53.72-14.5,79.07-.74,15.11,8.2,31.35,17,49.93,17,14.14,0,29.64-5.11,47-19.5a8,8,0,1,0-10.22-12.31,75.79,75.79,0,0,1-19.28,12.06l-53.84-53.82A103.34,103.34,0,0,0,64.24,72H40a8,8,0,0,0,0,16H64.24a87.66,87.66,0,0,1,41.88,10.56L76.49,128.17C63.82,129.35,50.07,134.84,34.89,147.42Zm91.57-33.67,46.13,46.12c-14-.43-26.88-7.39-40.77-14.93-10.75-5.84-22.09-12-34.42-15.05l22.26-22.26A87.14,87.14,0,0,1,126.46,113.75Z"/></svg><span class="leg-num">1.2</span><span class="leg-lbl">mile swim</span></li><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M208,112a47.81,47.81,0,0,0-16.93,3.09L165.93,72H192a8,8,0,0,1,8,8,8,8,0,0,0,16,0,24,24,0,0,0-24-24H152a8,8,0,0,0-6.91,12l11.65,20H99.26L82.91,60A8,8,0,0,0,76,56H48a8,8,0,0,0,0,16H71.41L85.12,95.51,69.41,117.06a48.13,48.13,0,1,0,12.92,9.44l11.59-15.9L125.09,164A8,8,0,1,0,138.91,156l-30.32-52h57.48l11.19,19.17A48,48,0,1,0,208,112ZM80,160a32,32,0,1,1-20.21-29.74l-18.25,25a8,8,0,1,0,12.92,9.42l18.25-25A31.88,31.88,0,0,1,80,160Zm128,32a32,32,0,0,1-22.51-54.72L201.09,164A8,8,0,1,0,214.91,156L199.3,129.21A32,32,0,1,1,208,192Z"/></svg><span class="leg-num">56</span><span class="leg-lbl">mile bike</span></li><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M231.16,166.63l-28.63-14.31A47.74,47.74,0,0,1,176,109.39V80a8,8,0,0,0-8-8,48.05,48.05,0,0,1-48-48,8,8,0,0,0-12.83-6.37L30.13,76l-.2.16a16,16,0,0,0-1.24,23.75L142.4,213.66a8,8,0,0,0,5.66,2.34H224a16,16,0,0,0,16-16V180.94A15.92,15.92,0,0,0,231.16,166.63ZM224,200H151.37L40,88.63l12.87-9.76,38.79,38.79A8,8,0,0,0,103,106.34L65.74,69.11l40-30.31A64.15,64.15,0,0,0,160,87.5v21.89a63.65,63.65,0,0,0,35.38,57.24L224,180.94ZM70.8,184H32a8,8,0,0,1,0-16H70.8a8,8,0,1,1,0,16Zm40,24a8,8,0,0,1-8,8H48a8,8,0,0,1,0-16h54.8A8,8,0,0,1,110.8,208Z"/></svg><span class="leg-num">13.1</span><span class="leg-lbl">mile run</span></li></ul><p class="race-note">The version that fits around school.</p></div>
+      <div class="race reveal"><p class="race-tag">After graduation</p><h3 class="race-name">Full Ironman</h3><p class="race-num">140.6</p><ul class="race-legs"><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M176,104a32,32,0,1,0-32-32A32,32,0,0,0,176,104Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,176,56Zm46.16,129.24a8,8,0,0,1-1,11.26c-17.36,14.39-32.86,19.5-47,19.5-18.58,0-34.82-8.82-49.93-17-25.35-13.76-47.24-25.65-79.07.74a8,8,0,1,1-10.22-12.31c40.17-33.29,70.32-16.93,96.93-2.49,25.35,13.77,47.24,25.65,79.07-.74A8,8,0,0,1,222.16,185.24ZM34.89,147.42a8,8,0,1,0,10.22,12.31c31.83-26.38,53.72-14.5,79.07-.74,15.11,8.2,31.35,17,49.93,17,14.14,0,29.64-5.11,47-19.5a8,8,0,1,0-10.22-12.31,75.79,75.79,0,0,1-19.28,12.06l-53.84-53.82A103.34,103.34,0,0,0,64.24,72H40a8,8,0,0,0,0,16H64.24a87.66,87.66,0,0,1,41.88,10.56L76.49,128.17C63.82,129.35,50.07,134.84,34.89,147.42Zm91.57-33.67,46.13,46.12c-14-.43-26.88-7.39-40.77-14.93-10.75-5.84-22.09-12-34.42-15.05l22.26-22.26A87.14,87.14,0,0,1,126.46,113.75Z"/></svg><span class="leg-num">2.4</span><span class="leg-lbl">mile swim</span></li><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M208,112a47.81,47.81,0,0,0-16.93,3.09L165.93,72H192a8,8,0,0,1,8,8,8,8,0,0,0,16,0,24,24,0,0,0-24-24H152a8,8,0,0,0-6.91,12l11.65,20H99.26L82.91,60A8,8,0,0,0,76,56H48a8,8,0,0,0,0,16H71.41L85.12,95.51,69.41,117.06a48.13,48.13,0,1,0,12.92,9.44l11.59-15.9L125.09,164A8,8,0,1,0,138.91,156l-30.32-52h57.48l11.19,19.17A48,48,0,1,0,208,112ZM80,160a32,32,0,1,1-20.21-29.74l-18.25,25a8,8,0,1,0,12.92,9.42l18.25-25A31.88,31.88,0,0,1,80,160Zm128,32a32,32,0,0,1-22.51-54.72L201.09,164A8,8,0,1,0,214.91,156L199.3,129.21A32,32,0,1,1,208,192Z"/></svg><span class="leg-num">112</span><span class="leg-lbl">mile bike</span></li><li><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M231.16,166.63l-28.63-14.31A47.74,47.74,0,0,1,176,109.39V80a8,8,0,0,0-8-8,48.05,48.05,0,0,1-48-48,8,8,0,0,0-12.83-6.37L30.13,76l-.2.16a16,16,0,0,0-1.24,23.75L142.4,213.66a8,8,0,0,0,5.66,2.34H224a16,16,0,0,0,16-16V180.94A15.92,15.92,0,0,0,231.16,166.63ZM224,200H151.37L40,88.63l12.87-9.76,38.79,38.79A8,8,0,0,0,103,106.34L65.74,69.11l40-30.31A64.15,64.15,0,0,0,160,87.5v21.89a63.65,63.65,0,0,0,35.38,57.24L224,180.94ZM70.8,184H32a8,8,0,0,1,0-16H70.8a8,8,0,1,1,0,16Zm40,24a8,8,0,0,1-8,8H48a8,8,0,0,1,0-16h54.8A8,8,0,0,1,110.8,208Z"/></svg><span class="leg-num">26.2</span><span class="leg-lbl">mile run</span></li></ul><p class="race-note">The one that's actually on the list.</p></div>
+    </div>
+    <div class="endure-body">
+      <div class="prose reveal">
+        <p>Twelve years of competitive swimming ended with a school record and a state meet, and then nothing. No season to train for, no clock to answer to. It took about a year to admit I missed having something on the calendar that scared me a little.</p>
+        <p>So the plan is an <strong>Ironman</strong>. Not someday in the abstract. A real one, with an entry fee and a start line.</p>
+        <p>I trained for it last year and got a long way into a program before reality caught up. What stopped me was never the training. It was the cost. Entry fees, a bike worth riding 112 miles, a wetsuit, travel, lodging. Endurance racing is expensive in a way nobody mentions when you first get the idea in your head.</p>
+        <p>So I'm approaching it the same way I'd approach any build. Start with the half, the <strong>70.3</strong>, while I'm still in school and the logistics are manageable. Then move up to the full distance after graduation, once I have the income and the schedule to train for it properly instead of squeezing it around everything else.</p>
+        <p>Right now I'm in the unglamorous part: pricing the whole thing out. What an entry actually runs, what equipment I genuinely need versus what the sport would like me to buy, what a real training block costs in hours, and how far ahead I need to start putting money aside. I'd rather solve that on a spreadsheet than let it end the attempt a second time.</p>
+        <p>It's on the bucket list for a simple reason. I want to be able to say I did it once.</p>
       </div>
-
-      <aside>
-        <div class="record-card">
-          <span class="record-tag">First target</span>
-          <h4>Half Ironman &middot; 70.3</h4>
-          <p>1.2 mile swim, 56 mile bike, 13.1 mile run. The version that fits around school.</p>
-        </div>
-        <div class="record-card">
-          <span class="record-tag">After graduation</span>
-          <h4>Full Ironman &middot; 140.6</h4>
-          <p>2.4 mile swim, 112 mile bike, 26.2 mile run. The one that's actually on the list.</p>
-        </div>
-
-        <div class="fact-card" style="margin-top:24px;">
-          <h4>Where it stands</h4>
-          <ul class="team-list">
-            <li>Trained a full block last year</li>
-            <li>Stopped by cost, not by fitness</li>
-            <li>Currently costing out entry and gear</li>
-            <li>Half first, full after college</li>
-            <li>The swim leg worries me least</li>
-          </ul>
-        </div>
-      </aside>
+      <div class="checklist reveal">
+        <h3 class="mini-title">Where it stands</h3>
+        <ul>
+          <li class="is-done">Trained a full block last year</li>
+          <li class="is-done">Stopped by cost, not by fitness</li>
+          <li class="is-now">Costing out entry and gear</li>
+          <li>Half first, while in school</li>
+          <li>Full distance after college</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== CONTACT ==================== -->
+<section class="section section--alt next-up" id="next-up">
+  <div class="wrap next-grid">
+    <div class="next-copy reveal">
+      <h2 class="section-title">Next up: the rally build</h2>
+      <p>When the 2019's stock engine gives out, it becomes a rally car. Forged short block, big brakes, real suspension.</p>
+      <a href="/future-plans/" class="btn btn-ghost">See the build plan <svg class="ic ic-arrow" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+    </div>
+    <a class="next-media reveal" href="/future-plans/" aria-label="See the rally build plan">
+      <div class="photo-slot photo-slot--render"><img src="/images/rally-render.jpg" alt="Four-view render of the planned black rally-liveried Subaru WRX STI" width="1800" height="1004" loading="lazy" decoding="async" /><span class="photo-slot-label">Photo<small></small></span></div>
+    </a>
+  </div>
+</section>
+
 <section class="section contact" id="contact">
-  <div class="wrap">
-    <div class="section-label">Contact</div>
-    <h2 class="section-title">Get in touch</h2>
-    <p class="section-intro">
-      Open to internship and full-time conversations in construction engineering, or just talk to me
-      about Subarus.
-    </p>
-
+  <div class="wrap contact-inner reveal">
+    <h2 class="contact-title">Get in touch</h2>
+    <p class="section-intro">Open to internship and full-time conversations in construction engineering, or just talk to me about Subarus.</p>
     <div class="contact-actions">
-      <a href="mailto:dominic.siwiec@gmail.com" class="btn btn-primary">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
-        dominic.siwiec@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" class="btn btn-ghost" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a href="mailto:dominic.siwiec@gmail.com" class="btn btn-primary"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg> dominic.siwiec@gmail.com</a>
+      <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" class="btn btn-ghost" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></svg> Connect on LinkedIn</a>
     </div>
-
-    <div class="social-row">
-      <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.instagram.com/dom_siwiec/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.swimcloud.com/swimmer/1989784/" target="_blank" rel="noopener">SwimCloud</a>
-    </div>
+    <ul class="social-row">
+      <li><a href="https://www.instagram.com/dom_siwiec/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>Instagram</a></li>
+      <li><a href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z"/></svg>YouTube</a></li>
+      <li><a href="https://www.swimcloud.com/swimmer/1989784/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M176,104a32,32,0,1,0-32-32A32,32,0,0,0,176,104Zm0-48a16,16,0,1,1-16,16A16,16,0,0,1,176,56Zm46.16,129.24a8,8,0,0,1-1,11.26c-17.36,14.39-32.86,19.5-47,19.5-18.58,0-34.82-8.82-49.93-17-25.35-13.76-47.24-25.65-79.07.74a8,8,0,1,1-10.22-12.31c40.17-33.29,70.32-16.93,96.93-2.49,25.35,13.77,47.24,25.65,79.07-.74A8,8,0,0,1,222.16,185.24ZM34.89,147.42a8,8,0,1,0,10.22,12.31c31.83-26.38,53.72-14.5,79.07-.74,15.11,8.2,31.35,17,49.93,17,14.14,0,29.64-5.11,47-19.5a8,8,0,1,0-10.22-12.31,75.79,75.79,0,0,1-19.28,12.06l-53.84-53.82A103.34,103.34,0,0,0,64.24,72H40a8,8,0,0,0,0,16H64.24a87.66,87.66,0,0,1,41.88,10.56L76.49,128.17C63.82,129.35,50.07,134.84,34.89,147.42Zm91.57-33.67,46.13,46.12c-14-.43-26.88-7.39-40.77-14.93-10.75-5.84-22.09-12-34.42-15.05l22.26-22.26A87.14,87.14,0,0,1,126.46,113.75Z"/></svg>SwimCloud</a></li>
+    </ul>
   </div>
 </section>
+
+</main>
 
 <footer class="site-footer">
+  <div class="livery" aria-hidden="true"></div>
   <div class="wrap footer-inner">
-    <p style="margin:0;">&copy; <span id="year"></span> Dominic Siwiec</p>
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#swimming">Swimming</a>
+    <p>&copy; <span id="year">2026</span> Dominic Siwiec</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#swimming">Swimming</a>
+      <a href="/#endurance">Endurance</a>
       <a href="/roblox/">Roblox</a>
       <a href="/future-plans/">What's next</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
