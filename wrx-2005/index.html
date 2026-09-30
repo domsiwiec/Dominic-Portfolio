@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +12,30 @@
 <meta property="og:description" content="A full teardown and rebuild of a 2005 Subaru Impreza WRX: engine swap, rust repair, roll cage, bodywork, and a respray in rally blue." />
 <meta property="og:image" content="https://dominicsiwiec.com/images/og-preview.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0b0b0d" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="alternate icon" type="image/png" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" />
 <link rel="stylesheet" href="/style.css" />
-<script>(function(){var d=document.documentElement;d.classList.add('js-reveal');try{if(sessionStorage.getItem('ds_seen'))d.classList.add('fast-load');sessionStorage.setItem('ds_seen','1');}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('ds_theme')}catch(e){}d.setAttribute('data-theme',t==='light'?'light':'dark');d.classList.add('js-reveal');try{if(sessionStorage.getItem('ds_seen'))d.classList.add('fast-load');sessionStorage.setItem('ds_seen','1')}catch(e){}})();</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <div id="cursor-glow" aria-hidden="true"></div>
 
-<!-- Wheel loader: dismisses itself via CSS, no JS required -->
+<!-- Loader: a TE37 rolls across, then the page. Dismisses itself in CSS. -->
 <div id="loader" aria-hidden="true">
   <div class="loader-road"></div>
   <div class="loader-streaks"><span></span><span></span><span></span></div>
-  <div class="loader-wheel"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#e8edf6" stroke="#54627a" stroke-width="7"/><circle cx="50" cy="50" r="46" fill="none" stroke="#8a99b0" stroke-width="7" stroke-dasharray="7 9" opacity=".9"/><circle cx="50" cy="50" r="33" fill="#ffffff" stroke="#5b8fd0" stroke-width="3"/><g stroke="#5b8fd0" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50.0,39.0 L50.0,20.0"/><path d="M60.5,46.6 L78.5,40.7"/><path d="M56.5,58.9 L67.6,74.3"/><path d="M43.5,58.9 L32.4,74.3"/><path d="M39.5,46.6 L21.5,40.7"/></g><circle cx="50" cy="50" r="9" fill="#5b8fd0"/><circle cx="50" cy="50" r="4" fill="#ffffff"/></svg></div>
+  <div class="loader-wheel"><svg class="te37" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><radialGradient id="teBarrel" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#050506"/><stop offset="1" stop-color="#16161a"/></radialGradient></defs><g class="w-spin"><circle cx="100" cy="100" r="98" fill="#141417"/><circle cx="100" cy="100" r="95.5" fill="none" stroke="#1f1f23" stroke-width="5" stroke-dasharray="3.2 4.3"/><circle cx="100" cy="100" r="88" fill="none" stroke="#202024" stroke-width="1"/><circle cx="100" cy="100" r="80.5" fill="url(#teBarrel)"/></g><circle cx="100" cy="100" r="60" fill="#3a3a40"/><circle cx="100" cy="100" r="54" fill="none" stroke="#2e2e33" stroke-width="1.2"/><circle cx="100" cy="100" r="33" fill="#26262b"/><path class="w-caliper" d="M120.70,36.28 A67,67 0 0 1 165.54,86.07 L143.04,90.85 A44,44 0 0 0 113.60,58.15 Z"/><path d="M132.00,44.57 A64,64 0 0 1 158.47,73.97 L142.94,80.88 A47,47 0 0 0 123.50,59.30 Z" fill="#000" opacity=".18"/><g class="w-spin"><circle cx="100" cy="100" r="76.5" fill="none" stroke="#1d1d21" stroke-width="7"/><circle cx="100" cy="100" r="79.6" fill="none" stroke="#4d4d56" stroke-width=".9"/><circle cx="100" cy="100" r="73.2" fill="none" stroke="#08080a" stroke-width="1"/><g fill="#1c1c20" stroke="#0a0a0c" stroke-width=".8" stroke-linejoin="round"><path d="M90.60,80.00 L109.40,80.00 L114.60,25.50 L85.40,25.50 Z"/><path d="M112.62,81.86 L122.02,98.14 L171.82,75.39 L157.22,50.11 Z"/><path d="M122.02,101.86 L112.62,118.14 L157.22,149.89 L171.82,124.61 Z"/><path d="M109.40,120.00 L90.60,120.00 L85.40,174.50 L114.60,174.50 Z"/><path d="M87.38,118.14 L77.98,101.86 L28.18,124.61 L42.78,149.89 Z"/><path d="M77.98,98.14 L87.38,81.86 L42.78,50.11 L28.18,75.39 Z"/></g><g fill="none" stroke="#3b3b43" stroke-width="1.1" stroke-linecap="round"><path d="M91.70,77.00 L86.80,26.50"/><path d="M115.77,81.31 L157.05,51.82"/><path d="M124.07,104.31 L170.25,125.32"/><path d="M108.30,123.00 L113.20,173.50"/><path d="M84.23,118.69 L42.95,148.18"/><path d="M75.93,95.69 L29.75,74.68"/></g><g fill="none" stroke="#0c0c0e" stroke-width="1.3"><path d="M86.80,34.50 L113.20,34.50"/><path d="M150.12,55.82 L163.32,78.68"/><path d="M163.32,121.32 L150.12,144.18"/><path d="M113.20,165.50 L86.80,165.50"/><path d="M49.88,144.18 L36.68,121.32"/><path d="M36.68,78.68 L49.88,55.82"/></g><circle cx="100" cy="100" r="22.5" fill="#1a1a1e" stroke="#2c2c32" stroke-width="1.2"/><g fill="#5a5a63"><circle cx="107.64" cy="89.48" r="3"/><circle cx="112.36" cy="104.02" r="3"/><circle cx="100.00" cy="113.00" r="3"/><circle cx="87.64" cy="104.02" r="3"/><circle cx="92.36" cy="89.48" r="3"/></g><g fill="#26262b"><circle cx="107.64" cy="89.48" r="1.2"/><circle cx="112.36" cy="104.02" r="1.2"/><circle cx="100.00" cy="113.00" r="1.2"/><circle cx="87.64" cy="104.02" r="1.2"/><circle cx="92.36" cy="89.48" r="1.2"/></g><circle cx="100" cy="100" r="7" fill="#101013" stroke="#34343b" stroke-width="1"/><circle cx="100" cy="100" r="3" fill="#2a2a30"/></g></svg></div>
 </div>
 
-<!-- Scroll tachometer: 0 to 8000, needle shakes as it climbs into the red -->
+<!-- Scroll tachometer -->
 <div id="speedo" aria-hidden="true">
   <svg viewBox="0 0 100 100">
     <circle class="gauge-track" cx="50" cy="50" r="34" fill="none" stroke-width="6"
@@ -45,21 +52,20 @@
   <span class="gauge-readout"><b data-rpm>0</b><i>rpm</i></span>
 </div>
 
-<!-- Fixed side rail: replaces the top nav on wide screens -->
-<aside class="rail" id="rail">
-  <a class="rail-brand" href="/"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg><span>Dominic Siwiec</span></a>
+<aside class="rail" id="rail" aria-label="Site">
+  <a class="rail-brand" href="/"><svg class="brand-wheel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="16"/><g fill="currentColor"><path d="M90.50,78.00 L109.50,78.00 L115.00,24.00 L85.00,24.00 Z"/><path d="M114.30,80.77 L123.80,97.23 L173.32,74.99 L158.32,49.01 Z"/><path d="M123.80,102.77 L114.30,119.23 L158.32,150.99 L173.32,125.01 Z"/><path d="M109.50,122.00 L90.50,122.00 L85.00,176.00 L115.00,176.00 Z"/><path d="M85.70,119.23 L76.20,102.77 L26.68,125.01 L41.68,150.99 Z"/><path d="M76.20,97.23 L85.70,80.77 L41.68,49.01 L26.68,74.99 Z"/><circle cx="100" cy="100" r="27"/></g></svg><span>Dominic Siwiec</span></a>
   <nav class="rail-nav" id="railNav" aria-label="Sections">
       <a class="rail-link" href="/#about"><span class="rail-tick"></span><span class="rail-num">01</span><span class="rail-text">About</span></a>
       <a class="rail-link" href="/#experience"><span class="rail-tick"></span><span class="rail-num">02</span><span class="rail-text">Experience</span></a>
     <div class="rail-group" data-group="projects">
       <div class="rail-row">
       <a class="rail-link" href="/#projects"><span class="rail-tick"></span><span class="rail-num">03</span><span class="rail-text">Projects</span></a>
-        <button class="rail-caret" type="button" aria-expanded="false" aria-label="Show Projects links"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10l4 4 4-4"/></svg></button>
+      <button class="rail-caret" type="button" aria-label="Show Projects pages" aria-expanded="false"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
       </div>
       <div class="rail-sub">
       <a class="rail-link rail-link--sub" href="/#youtube"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">YouTube</span></a>
       <a class="rail-link rail-link--sub" href="/#roblox" data-match="/roblox/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Roblox</span></a>
-      <a class="rail-link rail-link--sub" href="/#hardware"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Builds & resale</span></a>
+      <a class="rail-link rail-link--sub" href="/#hardware"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">Builds &amp; resale</span></a>
       <a class="rail-link rail-link--sub" href="/#wrx-2005" data-match="/wrx-2005/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2005 WRX</span></a>
       <a class="rail-link rail-link--sub" href="/#wrx-2019" data-match="/wrx-2019/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">2019 WRX</span></a>
       </div>
@@ -70,7 +76,7 @@
     <div class="rail-group rail-group--offsite" data-group="next">
       <div class="rail-row">
       <a class="rail-link" href="/future-plans/" data-match="/future-plans/"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">What's next</span></a>
-        <button class="rail-caret" type="button" aria-expanded="false" aria-label="Show What's next links"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10l4 4 4-4"/></svg></button>
+      <button class="rail-caret" type="button" aria-label="Show What's next pages" aria-expanded="false"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
       </div>
       <div class="rail-sub">
       <a class="rail-link rail-link--sub" href="/future-plans/#rally"><span class="rail-tick"></span><span class="rail-num"></span><span class="rail-text">The rally goal</span></a>
@@ -83,28 +89,34 @@
     <a href="https://www.linkedin.com/in/dominic-siwiec-5ab35b24a/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://www.youtube.com/@GingisDojo" target="_blank" rel="noopener">YouTube</a>
     <a href="https://www.instagram.com/dom_siwiec/" target="_blank" rel="noopener">Instagram</a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode"><svg class="ic ic-sun" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><svg class="ic ic-moon" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg><span class="theme-toggle-text" data-theme-label>Light mode</span></button>
   </div>
 </aside>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
-    <a href="/" class="brand"><svg class="brand-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M 20.02,9.52 L 23.09,10.44 L 23.09,13.56 L 20.02,14.48 L 19.74,15.26 L 21.50,17.94 L 19.49,20.32 L 16.55,19.06 L 15.84,19.47 L 15.46,22.65 L 12.39,23.19 L 10.95,20.33 L 10.14,20.19 L 7.80,22.38 L 5.10,20.83 L 5.84,17.71 L 5.31,17.08 L 2.11,17.26 L 1.04,14.33 L 3.61,12.41 L 3.61,11.59 L 1.04,9.67 L 2.11,6.74 L 5.31,6.92 L 5.84,6.29 L 5.10,3.17 L 7.80,1.62 L 10.14,3.81 L 10.95,3.67 L 12.39,0.81 L 15.46,1.35 L 15.84,4.53 L 16.55,4.94 L 19.49,3.68 L 21.50,6.06 L 19.74,8.74 Z M 7.90,12.00 A 4.10,4.10 0 1 0 16.10,12.00 A 4.10,4.10 0 1 0 7.90,12.00 Z" fill="currentColor" fill-rule="evenodd"/></svg>Dominic Siwiec</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <a href="/" class="brand"><svg class="brand-wheel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="16"/><g fill="currentColor"><path d="M90.50,78.00 L109.50,78.00 L115.00,24.00 L85.00,24.00 Z"/><path d="M114.30,80.77 L123.80,97.23 L173.32,74.99 L158.32,49.01 Z"/><path d="M123.80,102.77 L114.30,119.23 L158.32,150.99 L173.32,125.01 Z"/><path d="M109.50,122.00 L90.50,122.00 L85.00,176.00 L115.00,176.00 Z"/><path d="M85.70,119.23 L76.20,102.77 L26.68,125.01 L41.68,150.99 Z"/><path d="M76.20,97.23 L85.70,80.77 L41.68,49.01 L26.68,74.99 Z"/><circle cx="100" cy="100" r="27"/></g></svg><span>Dominic Siwiec</span></a>
+    <button class="theme-toggle theme-toggle--compact" type="button" data-theme-toggle aria-label="Switch to light mode"><svg class="ic ic-sun" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg><svg class="ic ic-moon" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg><span class="theme-toggle-text" data-theme-label>Light mode</span></button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
       <a href="/#about">About</a>
       <a href="/#experience">Experience</a>
       <a href="/#projects">Projects</a>
       <a href="/#swimming">Swimming</a>
+      <a href="/#endurance">Endurance</a>
       <a href="/#contact">Contact</a>
+      <a href="/future-plans/">What's next</a>
     </nav>
   </div>
 </header>
 
+<main id="main">
+
 <section class="page-hero">
   <div class="wrap">
-    <a href="/#projects" class="back-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> All projects</a>
+    <a href="/#projects" class="back-link"><svg class="ic" viewBox="0 0 256 256" fill="currentColor" focusable="false" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></svg> All projects</a>
     <div class="section-label">Project &middot; Full rebuild</div>
     <h1>2005 Subaru Impreza WRX</h1>
     <p class="lede">
@@ -332,17 +344,21 @@
   </div>
 </div>
 
+</main>
+
 <footer class="site-footer">
+  <div class="livery" aria-hidden="true"></div>
   <div class="wrap footer-inner">
-    <p style="margin:0;">&copy; <span id="year"></span> Dominic Siwiec</p>
-    <div class="footer-links">
+    <p>&copy; <span id="year">2026</span> Dominic Siwiec</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
       <a href="/#projects">Projects</a>
-      <a href="/wrx-2005/">2005 WRX</a>
-      <a href="/wrx-2019/">2019 WRX</a>
+      <a href="/#swimming">Swimming</a>
+      <a href="/#endurance">Endurance</a>
       <a href="/roblox/">Roblox</a>
       <a href="/future-plans/">What's next</a>
-      <a href="/#contact">Contact</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
